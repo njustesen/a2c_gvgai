@@ -258,7 +258,7 @@ def evaluate(policy, model_path, env_id, seed, nsteps=5, nstack=4, total_timeste
     std_score = np.std(runner.final_rewards[:runs])
 
     print("Mean score=" + str(mean_score))
-    print("Games=" + str(std_score))
+    print("Games=" + str(runs))
     print("Std. dev. score=" + str(std_score))
 
     env.close()
