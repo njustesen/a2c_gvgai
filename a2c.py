@@ -384,7 +384,7 @@ def main():
     #parser.add_argument('--env', help='environment ID', default='BreakoutNoFrameskip-v4')
     parser.add_argument('--env', help='environment ID', default='aliens-gvgai-v0')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
-    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=100000)
+    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=1000000)
     args = parser.parse_args()
     #logger.configure() # Not sure whether this should be called
 
