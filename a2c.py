@@ -281,7 +281,7 @@ def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(
 
         if steps >= next_model_save:
             next_model_save += save_interval
-            model.save("./models/a2c/" + game_name + "/", "model_episodes" + str(episodes) + "_frames" + str(frames) + ".pkl")
+            model.save("./models/a2c/" + game_name + "/model_frames" + str(frames) + ".pkl")
 
     env.close()
 
