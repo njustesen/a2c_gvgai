@@ -107,6 +107,8 @@ class Model(object):
 
         lr = Scheduler(v=lr, nvalues=total_timesteps, schedule=lrschedule)
 
+        self.saver = tf.train.Saver()
+
         def train(obs, states, rewards, masks, actions, values):
             advs = rewards - values
             for step in range(len(obs)):
@@ -122,16 +124,11 @@ class Model(object):
             return policy_loss, value_loss, policy_entropy
 
         def save(path, model_name):
-            ps = sess.run(params)
             make_path(path)
-            joblib.dump(ps, path + model_name)
+            self.saver.save(sess, path + model_name)
 
         def load(load_path):
-            loaded_params = joblib.load(load_path)
-            restores = []
-            for p, loaded_p in zip(params, loaded_params):
-                restores.append(p.assign(loaded_p))
-            ps = sess.run(restores)
+            self.saver.restore(sess, load_path)
 
         self.train = train
         self.train_model = train_model
@@ -281,36 +278,9 @@ def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(
 
         if steps >= next_model_save:
             next_model_save += save_interval
-            model.save("./models/a2c/" + game_name + "/", "model_frames" + str(frames) + ".pkl")
+            model.save("./models/a2c/" + game_name + "/", "model_frames" + str(frames))
 
     env.close()
-
-def enjoy(policy, model_path, env_id, seed, nsteps=5, nstack=4, total_timesteps=1000):
-    if policy == 'cnn':
-        policy_fn = CnnPolicy
-    elif policy == 'lstm':
-        policy_fn = LstmPolicy
-    elif policy == 'lnlstm':
-        policy_fn = LnLstmPolicy
-
-    tf.reset_default_graph()
-    set_global_seeds(seed)
-
-    env = VecFrameStack(make_atari_env(env_id, 1, seed), 4)
-    ob_space = env.observation_space
-    ac_space = env.action_space
-    model = Model(policy=policy_fn, ob_space=ob_space, ac_space=ac_space, nenvs=1, nsteps=nsteps, nstack=nstack, num_env=1)
-    model.load(model_path)
-    runner = Runner(env, model, nsteps=nsteps, gamma=0)
-
-    final_rewards = []
-    current_rewards = 0
-    for update in range(1, total_timesteps):
-        obs, states, rewards, masks, actions, values = runner.run()
-
-    print("Mean score="+ str(np.mean(runner.final_rewards)))
-    print("Games="+str(len(runner.final_rewards)))
-    print("Std. dev. score="+ str(np.std(runner.final_rewards)))
 
 def arg_parser():
     """
@@ -380,7 +350,7 @@ def main():
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
     parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=12)
-    parser.add_argument('--num-timesteps', type=int, default=int(10e7))
+    parser.add_argument('--num-timesteps', type=int, default=int(100e6))
     #parser.add_argument('--env', help='environment ID', default='BreakoutNoFrameskip-v4')
     parser.add_argument('--env', help='environment ID', default='aliens-gvgai-v0')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
@@ -388,12 +358,7 @@ def main():
     args = parser.parse_args()
     #logger.configure() # Not sure whether this should be called
 
-    # Use args.num_timesteps
-    # Use args.env
-    #args.env = "aliens-gvgai-v0"
-
     train(args.env, num_timesteps=args.num_timesteps, seed=args.seed, policy=args.policy, lrschedule=args.lrschedule, num_env=args.num_envs, save_interval=args.save_interval, frame_skip=False)
-    #enjoy(args.policy, "./models/a2c/" + args.env + "/model_episodes0_steps10.pkl", args.env, seed=1)
 
 if __name__ == '__main__':
     main()
