@@ -56,13 +56,13 @@ def make_atari_env(env_id, num_env, seed, wrapper_kwargs=None, start_index=0):
 def wrap_gvgai(env, frame_stack=False, scale=False, clip_rewards=False, noop_reset=False, frame_skip=False):
     """Configure environment for DeepMind-style Atari.
     """
-    env = WarpFrame(env)
+    env = ScaledFloatFrame(env)
+    if scale:
+        env = WarpFrame(env)
     if frame_skip:
         env = MaxAndSkipEnv(env, skip=4)
     if noop_reset:
         env = NoopResetEnv(env, noop_max=30)
-    if scale:
-        env = ScaledFloatFrame(env)
     if clip_rewards:
         env = ClipRewardEnv(env)
     if frame_stack:
@@ -358,7 +358,12 @@ def main():
     args = parser.parse_args()
     #logger.configure() # Not sure whether this should be called
 
+    # Use args.num_timesteps
+    # Use args.env
+    #args.env = "aliens-gvgai-v0"
+
     train(args.env, num_timesteps=args.num_timesteps, seed=args.seed, policy=args.policy, lrschedule=args.lrschedule, num_env=args.num_envs, save_interval=args.save_interval, frame_skip=False)
+    #evaluate(args.policy, "./models/a2c/" + args.env + "/model_episodes0_steps10.pkl", args.env, seed=1)
 
 if __name__ == '__main__':
     main()
