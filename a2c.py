@@ -53,10 +53,11 @@ def make_atari_env(env_id, num_env, seed, wrapper_kwargs=None, start_index=0):
     set_global_seeds(seed)
     return SubprocVecEnv([make_env(i + start_index) for i in range(num_env)])
 
-def wrap_gvgai(env, frame_stack=False, scale=False, clip_rewards=False, noop_reset=False, frame_skip=False):
+def wrap_gvgai(env, frame_stack=False, scale=False, clip_rewards=False, noop_reset=False, frame_skip=False, scale_float=False):
     """Configure environment for DeepMind-style Atari.
     """
-    env = ScaledFloatFrame(env)
+    if scale_float:
+        env = ScaledFloatFrame(env)
     if scale:
         env = WarpFrame(env)
     if frame_skip:
@@ -321,7 +322,7 @@ def make_gvgai_env(env_id, num_env, seed, wrapper_kwargs=None, start_index=0, fr
             env = gym.make(env_id)
             env.seed(seed + rank)
             env = Monitor(env, logger.get_dir() and os.path.join(logger.get_dir(), str(rank)))
-            return wrap_gvgai(env, scale=False, frame_stack=False, clip_rewards=False, noop_reset=False, frame_skip=frame_skip)
+            return wrap_gvgai(env)
         return _thunk
     set_global_seeds(seed)
     return SubprocVecEnv([make_env(i + start_index) for i in range(num_env)])
