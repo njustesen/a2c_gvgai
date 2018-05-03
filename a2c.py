@@ -193,13 +193,14 @@ def train(env_id, num_timesteps, seed, policy, lrschedule, num_env, save_interva
 def main():
     parser = arg_parser()
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
-    parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=2)
+    parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'],
+                        default='constant')
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=12)
     parser.add_argument('--num-timesteps', type=int, default=int(100e6))
-    #parser.add_argument('--env', help='environment ID', default='BreakoutNoFrameskip-v4')
+    # parser.add_argument('--env', help='environment ID', default='BreakoutNoFrameskip-v4')
     parser.add_argument('--env', help='environment ID', default='aliens-gvgai-v0')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
-    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=1000)
+    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=1000000)
     args = parser.parse_args()
     #logger.configure() # Not sure whether this should be called
 
