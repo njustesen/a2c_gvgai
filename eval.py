@@ -91,14 +91,15 @@ def eval(policy, model_steps, env_id, seed, nsteps=5, nstack=1, total_timesteps=
 
     ob_space = env.observation_space
     ac_space = env.action_space
-    model = Model(policy=policy_fn, ob_space=ob_space, ac_space=ac_space, nenvs=num_env, nsteps=nsteps, nstack=nstack, num_env=num_env)
+    model = Model(policy=policy_fn, ob_space=ob_space, ac_space=ac_space, nenvs=num_env, nsteps=nsteps)
 
     try:
         model.load(env_id, model_steps)
-    except OSError as e:
-        print("Model not found with env " + env_id + " and steps " + str(model_steps))
+    except Exception as e:
+        print(e)
         env.close()
         return
+
     runner = Runner(env, model, nsteps=nsteps, gamma=0, render=render)
 
     while len(runner.final_rewards) < runs:
@@ -116,7 +117,7 @@ def eval(policy, model_steps, env_id, seed, nsteps=5, nstack=1, total_timesteps=
 def main():
     parser = arg_parser()
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
-    parser.add_argument('--model-steps', help="Local path to the trained model", type=int, default=20000)
+    parser.add_argument('--model-steps', help="Local path to the trained model", type=int, default=1000)
     parser.add_argument('--runs', help='Number of runs to evaluate the model', type=int, default=2)
     parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=1)
     parser.add_argument('--env', help='environment ID', default='aliens-gvgai-v0')

@@ -76,7 +76,7 @@ def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(
     ob_space = env.observation_space
     ac_space = env.action_space
     #num_procs = len(env.remotes) # HACK
-    model = Model(policy=policy, ob_space=ob_space, ac_space=ac_space, nenvs=nenvs, nsteps=nsteps, nstack=nstack, num_env=num_env, ent_coef=ent_coef, vf_coef=vf_coef,
+    model = Model(policy=policy, ob_space=ob_space, ac_space=ac_space, nenvs=nenvs, nsteps=nsteps, ent_coef=ent_coef, vf_coef=vf_coef,
         max_grad_norm=max_grad_norm, lr=lr, alpha=alpha, epsilon=epsilon, total_timesteps=total_timesteps, lrschedule=lrschedule)
     runner = Runner(env, model, nsteps=nsteps, gamma=gamma)
 

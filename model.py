@@ -2,20 +2,16 @@ import tensorflow as tf
 
 from baselines.a2c.utils import Scheduler, make_path, find_trainable_variables
 from baselines.a2c.utils import cat_entropy, mse
-
+from baselines.common import tf_util
 
 class Model(object):
 
-    def __init__(self, policy, ob_space, ac_space, nenvs, nsteps, nstack, num_env,
-            ent_coef=0.01, vf_coef=0.5, max_grad_norm=0.5, lr=7e-4,
-            alpha=0.99, epsilon=1e-5, total_timesteps=int(80e6), lrschedule='linear'):
-        config = tf.ConfigProto(allow_soft_placement=True,
-                                intra_op_parallelism_threads=num_env,
-                                inter_op_parallelism_threads=num_env)
-        config.gpu_options.allow_growth = True
-        sess = tf.Session(config=config)
-        nact = ac_space.n
-        nbatch = nenvs*nsteps
+    def __init__(self, policy, ob_space, ac_space, nenvs, nsteps,
+                 ent_coef=0.01, vf_coef=0.5, max_grad_norm=0.5, lr=7e-4,
+                 alpha=0.99, epsilon=1e-5, total_timesteps=int(80e6), lrschedule='linear'):
+
+        sess = tf_util.make_session()
+        nbatch = nenvs * nsteps
 
         A = tf.placeholder(tf.int32, [nbatch])
         ADV = tf.placeholder(tf.float32, [nbatch])
@@ -23,13 +19,13 @@ class Model(object):
         LR = tf.placeholder(tf.float32, [])
 
         step_model = policy(sess, ob_space, ac_space, nenvs, 1, reuse=False)
-        train_model = policy(sess, ob_space, ac_space, nenvs*nsteps, nsteps, reuse=True)
+        train_model = policy(sess, ob_space, ac_space, nenvs * nsteps, nsteps, reuse=True)
 
         neglogpac = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=train_model.pi, labels=A)
         pg_loss = tf.reduce_mean(ADV * neglogpac)
         vf_loss = tf.reduce_mean(mse(tf.squeeze(train_model.vf), R))
         entropy = tf.reduce_mean(cat_entropy(train_model.pi))
-        loss = pg_loss - entropy*ent_coef + vf_loss * vf_coef
+        loss = pg_loss - entropy * ent_coef + vf_loss * vf_coef
 
         params = find_trainable_variables("model")
         grads = tf.gradients(loss, params)
