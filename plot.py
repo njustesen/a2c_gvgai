@@ -68,8 +68,23 @@ def plot(title, data, smooth=10):
 
     plt.savefig(title + '.pdf')
 
-game = "aliens-gvgai-v0"
-file = 'logs/a2c/' + game + '.log'
-data = load(file)
-title = game.split('-')[0]
-plot(title, data)
+def arg_parser():
+    """
+    Create an empty argparse.ArgumentParser.
+    """
+    import argparse
+    return argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+def main():
+    parser = arg_parser()
+    parser.add_argument('--env', help='environment ID', default='aliens-gvgai-v0')
+    args = parser.parse_args()
+
+    file = 'logs/a2c/' + args.env + '.log'
+    data = load(file)
+    title = args.env.split('-')[0]
+    plot(title, data)
+
+if __name__ == '__main__':
+    main()
+

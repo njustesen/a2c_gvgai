@@ -37,7 +37,7 @@ class Model(object):
 
         lr = Scheduler(v=lr, nvalues=total_timesteps, schedule=lrschedule)
 
-        self.saver = tf.train.Saver()
+        self.saver = tf.train.Saver(max_to_keep=1000)
 
         def train(obs, states, rewards, masks, actions, values):
             advs = rewards - values
