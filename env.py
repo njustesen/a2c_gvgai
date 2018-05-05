@@ -1,6 +1,11 @@
-import numpy as np
+import os
+import gym_gvgai
 from multiprocessing import Process, Pipe
 from baselines.common.vec_env import VecEnv, CloudpickleWrapper
+from baselines import logger
+from baselines.common.atari_wrappers import *
+from baselines.common import set_global_seeds
+from baselines.bench import Monitor
 
 
 def worker(remote, parent_remote, env_fn_wrapper, level_selector=None):
@@ -92,3 +97,34 @@ class SubprocVecEnv(VecEnv):
         for p in self.ps:
             p.join()
         self.closed = True
+
+
+def wrap_gvgai(env, frame_stack=False, scale=False, clip_rewards=False, noop_reset=False, frame_skip=False, scale_float=False):
+    """Configure environment for DeepMind-style Atari.
+    """
+    if scale_float:
+        env = ScaledFloatFrame(env)
+    if scale:
+        env = WarpFrame(env)
+    if frame_skip:
+        env = MaxAndSkipEnv(env, skip=4)
+    if noop_reset:
+        env = NoopResetEnv(env, noop_max=30)
+    if clip_rewards:
+        env = ClipRewardEnv(env)
+    if frame_stack:
+        env = FrameStack(env, 4)
+    return env
+
+
+def make_gvgai_env(env_id, num_env, seed, start_index=0, level_selector=None):
+    def make_env(rank): # pylint: disable=C0111
+        def _thunk():
+            env = gym.make(env_id)
+            env.seed(seed + rank)
+            env = Monitor(env, logger.get_dir() and os.path.join(logger.get_dir(), str(rank)))
+            return wrap_gvgai(env)
+        return _thunk
+    set_global_seeds(seed)
+    return SubprocVecEnv([make_env(i + start_index) for i in range(num_env)], level_selector=level_selector)
+

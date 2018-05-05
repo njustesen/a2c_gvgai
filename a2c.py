@@ -1,57 +1,17 @@
-import os
-import gym
-import gym_gvgai
 import time
-import numpy as np
 import tensorflow as tf
 import argparse
 
-from baselines import logger
-
 from model import Model
 from runner import Runner
-
+from env import *
 from level_selector import *
 
 from baselines.a2c.utils import make_path
 from baselines.a2c.policies import CnnPolicy
-from baselines.bench import Monitor
-from baselines.common.atari_wrappers import make_atari, NoopResetEnv, MaxAndSkipEnv, WarpFrame, ScaledFloatFrame, ClipRewardEnv, FrameStack
-from baselines.common import set_global_seeds, explained_variance
-#from baselines.common.vec_env.subproc_vec_env import SubprocVecEnv
-from subproc_vec_env import *
-from baselines.common.atari_wrappers import wrap_deepmind
+
+from baselines.common import set_global_seeds
 from baselines.ppo2.policies import CnnPolicy, LstmPolicy, LnLstmPolicy
-
-
-def make_gvgai_env(env_id, num_env, seed, start_index=0, level_selector=None):
-    def make_env(rank): # pylint: disable=C0111
-        def _thunk():
-            env = gym.make(env_id)
-            env.seed(seed + rank)
-            env = Monitor(env, logger.get_dir() and os.path.join(logger.get_dir(), str(rank)))
-            return wrap_gvgai(env)
-        return _thunk
-    set_global_seeds(seed)
-    return SubprocVecEnv([make_env(i + start_index) for i in range(num_env)], level_selector=level_selector)
-
-
-def wrap_gvgai(env, frame_stack=False, scale=False, clip_rewards=False, noop_reset=False, frame_skip=False, scale_float=False):
-    """Configure environment for DeepMind-style Atari.
-    """
-    if scale_float:
-        env = ScaledFloatFrame(env)
-    if scale:
-        env = WarpFrame(env)
-    if frame_skip:
-        env = MaxAndSkipEnv(env, skip=4)
-    if noop_reset:
-        env = NoopResetEnv(env, noop_max=30)
-    if clip_rewards:
-        env = ClipRewardEnv(env)
-    if frame_stack:
-        env = FrameStack(env, 4)
-    return env
 
 
 def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(80e6), vf_coef=0.5, ent_coef=0.01, max_grad_norm=0.5, lr=7e-4, lrschedule='linear', epsilon=1e-5, alpha=0.99, gamma=0.99, save_interval=25000, num_env=1, frame_skip=False, level=None, level_selector=None):
@@ -77,7 +37,7 @@ def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(
     #num_procs = len(env.remotes) # HACK
     model = Model(policy=policy, ob_space=ob_space, ac_space=ac_space, nenvs=nenvs, nsteps=nsteps, ent_coef=ent_coef, vf_coef=vf_coef,
         max_grad_norm=max_grad_norm, lr=lr, alpha=alpha, epsilon=epsilon, total_timesteps=total_timesteps, lrschedule=lrschedule)
-    runner = Runner(env, model, nsteps=nsteps, gamma=gamma, level_selector=level_selector)
+    runner = Runner(env, model, nsteps=nsteps, gamma=gamma)
 
     nbatch = nenvs*nsteps
     tstart = time.time()

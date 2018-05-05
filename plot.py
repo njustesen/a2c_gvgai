@@ -6,6 +6,9 @@ import brewer2mpl
 import math
 import numpy as np
 from time import sleep
+import glob
+
+from baselines.a2c.utils import make_path
 
 fontsize = 14
 plt.style.use('ggplot')
@@ -66,7 +69,8 @@ def plot(title, data, smooth=10):
     #handles, labels = plt.get_legend_handles_labels()
     #plt.legend(handles, labels, loc='upper center', ncol=2, fontsize=fontsize)
 
-    plt.savefig(title + '.pdf')
+    make_path('./plots')
+    plt.savefig('./plots/' + title + '.pdf')
 
 def arg_parser():
     """
@@ -77,13 +81,12 @@ def arg_parser():
 
 def main():
     parser = arg_parser()
-    parser.add_argument('--env', help='environment ID', default='aliens-gvgai-v0')
     args = parser.parse_args()
 
-    file = 'logs/a2c/' + args.env + '.log'
-    data = load(file)
-    title = args.env.split('-')[0]
-    plot(title, data)
+    for file in glob.iglob('./logs/a2c/*.log'):
+        data = load(file)
+        title = file.split('/')[-1].split('.')[0].replace('gvgai-','').replace('-v0','').replace('-', ' ').replace('_', ' ').replace('lg', '')
+        plot(title, data)
 
 if __name__ == '__main__':
     main()
