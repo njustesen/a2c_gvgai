@@ -87,6 +87,7 @@ def main():
         data = load(file)
         title = file.split('/')[-1].split('.')[0].replace('gvgai-','').replace('-v0','').replace('-', ' ').replace('_', ' ').replace('lg', '')
         plot(title, data)
+        plt.clf()
 
 if __name__ == '__main__':
     main()

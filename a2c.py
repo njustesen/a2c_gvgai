@@ -94,13 +94,13 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=2)
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=12)
     parser.add_argument('--num-timesteps', type=int, default=int(10e6))
-    parser.add_argument('--env', help='Environment ID', default='aliens')
+    parser.add_argument('--env', help='Environment ID', default='boulderdash')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=1000000)
     parser.add_argument('--level', help='Level to train on', type=int, default=0)
-    parser.add_argument('--level-selector', help='Level selector to use in training', choices=[None, 'random-all', 'random-0123', 'pcg-random', 'pgc-progressive'], default=None)
+    parser.add_argument('--level-selector', help='Level selector to use in training', choices=[None, 'random-all', 'random-0123', 'pcg-random', 'pgc-progressive'], default='random-0123')
     args = parser.parse_args()
 
     # Environment name

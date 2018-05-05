@@ -32,10 +32,10 @@ def eval(model, env, nsteps=5, runs=100, render=False, level_selector=None):
 def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
-    parser.add_argument('--model-steps', help="Local path to the trained model", type=int, default=0)
-    parser.add_argument('--runs', help='Number of runs to evaluate the model', type=int, default=2)
+    parser.add_argument('--model-steps', help="Local path to the trained model", type=int, default=7*1000000)
+    parser.add_argument('--runs', help='Number of runs to evaluate the model', type=int, default=10)
     parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=1)
-    parser.add_argument('--env', help='environment ID', default='aliens')
+    parser.add_argument('--env', help='environment ID', default='boulderdash')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--level', help='Level to train on', type=int, default=0)
     parser.add_argument('--level-selector', help='Level selector to use in training',
