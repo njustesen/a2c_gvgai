@@ -99,8 +99,8 @@ def main():
     parser.add_argument('--env', help='Environment ID', default='boulderdash')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=1000000)
-    parser.add_argument('--level', help='Level to train on', type=int, default=0)
-    parser.add_argument('--level-selector', help='Level selector to use in training', choices=[None, 'random-all', 'random-0123', 'pcg-random', 'pgc-progressive'], default='random-0123')
+    parser.add_argument('--level', help='Level to trained on', type=int, default=0)
+    parser.add_argument('--level-selector', help='Level selector to use in training', choices=[None, 'random-all', 'random-0123', 'pcg-random', 'pgc-progressive'], default='pcg-random')
     args = parser.parse_args()
 
     # Environment name

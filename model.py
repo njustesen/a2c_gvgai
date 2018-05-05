@@ -10,7 +10,11 @@ class Model(object):
                  ent_coef=0.01, vf_coef=0.5, max_grad_norm=0.5, lr=7e-4,
                  alpha=0.99, epsilon=1e-5, total_timesteps=int(80e6), lrschedule='linear'):
 
-        sess = tf_util.make_session()
+        config = tf.ConfigProto(allow_soft_placement=True,
+                                intra_op_parallelism_threads=nenvs,
+                                inter_op_parallelism_threads=nenvs)
+        config.gpu_options.allow_growth = True
+        sess = tf.Session(config=config)
         nbatch = nenvs * nsteps
 
         A = tf.placeholder(tf.int32, [nbatch])

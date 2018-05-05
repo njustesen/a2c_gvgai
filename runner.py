@@ -37,6 +37,8 @@ class Runner(object):
             mb_values.append(values)
             mb_dones.append(self.dones)
             obs, rewards, dones, _ = self.env.step(actions)
+            if self.render:
+                self.env.render()
             self.states = states
             self.dones = dones
             for n, done in enumerate(dones):

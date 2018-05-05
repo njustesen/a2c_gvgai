@@ -19,15 +19,18 @@ def worker(remote, parent_remote, env_fn_wrapper, level_selector=None):
             ob, reward, done, info = env.step(data)
             #score += reward
             if done:
+                print("Done")
                 if level_selector is not None:
                     #level_selector.report(win)
-                    env.unwrapped._setLevel(level_selector.get_level())
+                    level = level_selector.get_level()
+                    env.unwrapped._setLevel(level)
                 ob = env.reset()
                 #score = 0
             remote.send((ob, reward, done, info))
         elif cmd == 'reset':
             if level_selector is not None:
-                env.unwrapped._setLevel(level_selector.get_level())
+                level = level_selector.get_level()
+                env.unwrapped._setLevel(level)
             ob = env.reset()
             #score = 0
             remote.send(ob)
@@ -38,6 +41,8 @@ def worker(remote, parent_remote, env_fn_wrapper, level_selector=None):
             remote.close()
             #score = 0
             break
+        elif cmd == 'render':
+            env.render()
         elif cmd == 'get_spaces':
             remote.send((env.observation_space, env.action_space))
         else:
@@ -80,6 +85,11 @@ class SubprocVecEnv(VecEnv):
         for remote in self.remotes:
             remote.send(('reset', None))
         return np.stack([remote.recv() for remote in self.remotes])
+
+    def render(self):
+        if self.render:
+            for remote in self.remotes:
+                remote.send(('render', None))
 
     def reset_task(self):
         for remote in self.remotes:

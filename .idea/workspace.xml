@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b64f2596-42ae-4568-b028-56f4703c58d5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a2c.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/level_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/level_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,10 +18,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/a2c_gvgai$test2.coverage" NAME="eval Coverage Results" MODIFIED="1525490745869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a2c_gvgai$test2.coverage" NAME="eval Coverage Results" MODIFIED="1525503826860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$level_generator.coverage" NAME="level_generator Coverage Results" MODIFIED="1525484935012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$plot.coverage" NAME="plot Coverage Results" MODIFIED="1525489677500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/a2c_gvgai$a2c.coverage" NAME="a2c Coverage Results" MODIFIED="1525491421616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a2c_gvgai$model.coverage" NAME="model Coverage Results" MODIFIED="1525496110818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a2c_gvgai$a2c.coverage" NAME="a2c Coverage Results" MODIFIED="1525549722904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$level_selector.coverage" NAME="level_selector Coverage Results" MODIFIED="1525464524172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -28,8 +30,8 @@
       <file leaf-file-name="eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="37" column="78" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
+            <state relative-caret-position="460">
+              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
               <folding>
                 <element signature="e#1#24#0" expanded="true" />
               </folding>
@@ -40,7 +42,7 @@
       <file leaf-file-name="plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
+            <state relative-caret-position="1230">
               <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -52,8 +54,8 @@
       <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="210">
+              <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -64,8 +66,8 @@
       <file leaf-file-name="a2c.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/a2c.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="103" column="30" lean-forward="true" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
+            <state relative-caret-position="147">
+              <caret line="98" column="78" lean-forward="true" selection-start-line="98" selection-start-column="78" selection-end-line="98" selection-end-column="78" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -76,8 +78,8 @@
       <file leaf-file-name="runner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="-135">
+              <caret line="40" column="24" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -88,8 +90,8 @@
       <file leaf-file-name="env.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="223">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -109,10 +111,22 @@
       <file leaf-file-name="level_selector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/level_selector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="166">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="level_generator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/level_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,6 +148,7 @@
       <find>atari_arg_parser</find>
       <find>make_p</find>
       <find>make_gvgai_env</find>
+      <find>render</find>
       <find>ParamGenerator</find>
     </findStrings>
   </component>
@@ -149,18 +164,18 @@
         <option value="$PROJECT_DIR$/param_generator.py" />
         <option value="$PROJECT_DIR$/level_selector.py" />
         <option value="$PROJECT_DIR$/subproc_vec_env.py" />
-        <option value="$PROJECT_DIR$/level_generator.py" />
         <option value="$PROJECT_DIR$/logs/a2c/gvgai-boulderdash-lvl0-v0_lgRandomPCGSelector.log" />
         <option value="$PROJECT_DIR$/logs/a2c/gvgai-boulderdash-lvl0-v0_lgRandomSelector.log" />
-        <option value="$PROJECT_DIR$/env.py" />
-        <option value="$PROJECT_DIR$/runner.py" />
         <option value="$PROJECT_DIR$/logs/a2c/gvgai-aliens-lvl0-v0.log" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/plot.py" />
-        <option value="$PROJECT_DIR$/eval.py" />
         <option value="$PROJECT_DIR$/models/gvgai-boulderdash-lvl0-v0/checkpoint" />
         <option value="$PROJECT_DIR$/models/aliens-gvgai-lvl0-v0/checkpoint" />
         <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/runner.py" />
+        <option value="$PROJECT_DIR$/eval.py" />
+        <option value="$PROJECT_DIR$/level_generator.py" />
+        <option value="$PROJECT_DIR$/env.py" />
         <option value="$PROJECT_DIR$/a2c.py" />
       </list>
     </option>
@@ -175,7 +190,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="43" />
+    <option name="x" value="44" />
     <option name="y" value="23" />
     <option name="width" value="1637" />
     <option name="height" value="1023" />
@@ -214,23 +229,6 @@
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="aliens-gvgai-lvl0-v0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="gvgai-boulderdash-lvl0-v0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,7 +323,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="level_selector" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="a2c_gvgai" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -338,7 +336,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/level_selector.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -368,15 +366,15 @@
       <item itemvalue="Python.a2c" />
       <item itemvalue="Python.plot" />
       <item itemvalue="Python.level_generator" />
-      <item itemvalue="Python.level_selector" />
+      <item itemvalue="Python.model" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.a2c" />
         <item itemvalue="Python.eval" />
+        <item itemvalue="Python.model" />
         <item itemvalue="Python.plot" />
         <item itemvalue="Python.level_generator" />
-        <item itemvalue="Python.level_selector" />
       </list>
     </recent_temporary>
   </component>
@@ -394,17 +392,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="23" width="1637" height="1023" extended-state="0" />
+    <frame x="44" y="23" width="1637" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24838012" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28941685" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2846395" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16175549" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -431,7 +429,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/level_generator.py</url>
-          <line>32</line>
+          <line>31</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -441,7 +439,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model.py</url>
-          <line>61</line>
+          <line>65</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
@@ -454,9 +452,20 @@
       </default-breakpoints>
       <option name="time" value="21" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.c" />
+        <watch expression="self.id" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>self.id</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>file.split('/')[-1].split('.')[0].replace('gvgai-','').replace('-v0','')</expression-string>
         <language-id>Python</language-id>
@@ -494,11 +503,6 @@
       </expression>
       <expression>
         <expression-string>os.path.dirname(os.path.realpath(__file__))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>os.path.realpath(__file__)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -721,26 +725,6 @@
     <entry file="file://$PROJECT_DIR$/levels/boulderdash_0.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/level_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level_selector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/a2c/gvgai-boulderdash-lvl0-v0_lgRandomPCGSelector.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -774,26 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/a2c/gvgai-aliens-lvl3-v0.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -811,17 +775,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/aliens-gvgai-lvl0-v0/gvgai-aliens-lvl0-v0-10000000.data-00000-of-00001">
+    <entry file="file://$PROJECT_DIR$/models/gvgai-aliens-lvl0-v0/gvgai-aliens-lvl0-v0-10000000.data-00000-of-00001">
       <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/models/gvgai-boulderdash-lvl0-v0/gvgai-boulderdash-lvl0-v0-3000000.meta">
@@ -837,7 +791,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/aliens-gvgai-lvl0-v0/checkpoint">
+    <entry file="file://$PROJECT_DIR$/models/gvgai-aliens-lvl0-v0/checkpoint">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
@@ -846,28 +800,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="210">
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="37" column="78" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
+        <state relative-caret-position="460">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
           <folding>
             <element signature="e#1#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level_selector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/a2c.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="103" column="30" lean-forward="true" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
+        <state relative-caret-position="147">
+          <caret line="98" column="78" lean-forward="true" selection-start-line="98" selection-start-column="78" selection-end-line="98" selection-end-column="78" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

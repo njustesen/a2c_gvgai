@@ -1,5 +1,5 @@
-import numpy as np
 import os
+import uuid
 
 
 class LevelGenerator(object):
@@ -24,13 +24,12 @@ class ParamGenerator(LevelGenerator):
 
     def __init__(self, dir, game, width=None, height=None):
         super().__init__(dir, game)
-        self.c = 0
         self.width = width
         self.height = height
         self.script = os.path.dirname(os.path.realpath(__file__)) + '/lib/gvgai_generator/app.js'
 
     def generate(self, params=[], difficulty=None):
-        name = self.game + "_" + str(self.c)
+        name = self.game + "_" + str(uuid.uuid1())
         if self.width is not None and self.height is not None:
             params = [self.width, self.height] + params
         if difficulty is not None:
@@ -39,7 +38,6 @@ class ParamGenerator(LevelGenerator):
         param_str = " ".join(params)
         file = self.dir + name + ".txt"
         os.system("node " + self.script + " " + self.game + " " + file + " " + param_str)
-        self.c += 1
         path = os.path.abspath(file)
         return path
 

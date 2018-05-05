@@ -37,20 +37,24 @@ def main():
     parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=1)
     parser.add_argument('--env', help='environment ID', default='boulderdash')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
-    parser.add_argument('--level', help='Level to train on', type=int, default=0)
+    parser.add_argument('--level-train', help='Level it was trained on', type=int, default=0)
+    parser.add_argument('--level-test', help='Level to test on', type=int, default=4)
     parser.add_argument('--level-selector', help='Level selector to use in training',
                         choices=[None, 'random-all', 'random-0123', 'pcg-random', 'pgc-progressive'], default=None)
-    parser.add_argument('--render', action='store_true', default=False,
+    parser.add_argument('--render', action='store_true', default=True,
                         help='Render screen (default: False)')
 
     args = parser.parse_args()
 
     # Environment name
-    env_id = "gvgai-" + args.env
+    env_id_model = "gvgai-" + args.env
+    env_id_env = "gvgai-" + args.env
 
     # Fixed level?
-    env_id += "-lvl" + str(args.level)
-    env_id += "-v0"
+    env_id_model += "-lvl" + str(args.level_train)
+    env_id_model += "-v0"
+    env_id_env += "-lvl" + str(args.level_test)
+    env_id_env += "-v0"
 
     # Level selector
     level_selector = None
@@ -66,7 +70,7 @@ def main():
         if args.level_selector == "random":
             level_selector = ProgressivePCGSelector(path, args.env)
 
-    env = make_gvgai_env(env_id, args.num_envs, args.seed, level_selector=level_selector)
+    env = make_gvgai_env(env_id_env, args.num_envs, args.seed, level_selector=level_selector)
 
     if args.policy == 'cnn':
         policy_fn = CnnPolicy
@@ -82,7 +86,7 @@ def main():
     model = Model(policy=policy_fn, ob_space=ob_space, ac_space=ac_space, nenvs=args.num_envs, nsteps=5)
 
     try:
-        model.load(env_id, args.model_steps)
+        model.load(env_id_model, args.model_steps)
     except Exception as e:
         print(e)
         env.close()
