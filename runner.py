@@ -4,8 +4,9 @@ from baselines.a2c.utils import discount_with_dones
 
 class Runner(object):
 
-    def __init__(self, env, model, nsteps=5, gamma=0.99, render=False):
+    def __init__(self, env, model, nsteps=5, gamma=0.99, render=False, level_selector=None):
         self.env = env
+        self.env.level_selector = level_selector
         self.model = model
         self.render = render
         nh, nw, nc = env.observation_space.shape

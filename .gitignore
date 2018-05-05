@@ -102,3 +102,7 @@ ENV/
 
 # run folders
 run_*/
+
+# Models and logs
+models/
+logs/

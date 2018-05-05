@@ -4,44 +4,37 @@ import gym_gvgai
 import time
 import numpy as np
 import tensorflow as tf
-from baselines import logger
+import argparse
 
-from PIL import Image
+from baselines import logger
 
 from model import Model
 from runner import Runner
+
+from level_selector import *
 
 from baselines.a2c.utils import make_path
 from baselines.a2c.policies import CnnPolicy
 from baselines.bench import Monitor
 from baselines.common.atari_wrappers import make_atari, NoopResetEnv, MaxAndSkipEnv, WarpFrame, ScaledFloatFrame, ClipRewardEnv, FrameStack
 from baselines.common import set_global_seeds, explained_variance
-from baselines.common.vec_env.subproc_vec_env import SubprocVecEnv
+#from baselines.common.vec_env.subproc_vec_env import SubprocVecEnv
+from subproc_vec_env import *
 from baselines.common.atari_wrappers import wrap_deepmind
 from baselines.ppo2.policies import CnnPolicy, LstmPolicy, LnLstmPolicy
 
 
-def arg_parser():
-    """
-    Create an empty argparse.ArgumentParser.
-    """
-    import argparse
-    return argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-
-def make_atari_env(env_id, num_env, seed, wrapper_kwargs=None, start_index=0):
-    """
-    Create a wrapped, monitored SubprocVecEnv for Atari.
-    """
-    if wrapper_kwargs is None: wrapper_kwargs = {}
+def make_gvgai_env(env_id, num_env, seed, start_index=0, level_selector=None):
     def make_env(rank): # pylint: disable=C0111
         def _thunk():
-            env = make_atari(env_id)
+            env = gym.make(env_id)
             env.seed(seed + rank)
             env = Monitor(env, logger.get_dir() and os.path.join(logger.get_dir(), str(rank)))
-            return wrap_deepmind(env, **wrapper_kwargs)
+            return wrap_gvgai(env)
         return _thunk
     set_global_seeds(seed)
-    return SubprocVecEnv([make_env(i + start_index) for i in range(num_env)])
+    return SubprocVecEnv([make_env(i + start_index) for i in range(num_env)], level_selector=level_selector)
+
 
 def wrap_gvgai(env, frame_stack=False, scale=False, clip_rewards=False, noop_reset=False, frame_skip=False, scale_float=False):
     """Configure environment for DeepMind-style Atari.
@@ -60,13 +53,19 @@ def wrap_gvgai(env, frame_stack=False, scale=False, clip_rewards=False, noop_res
         env = FrameStack(env, 4)
     return env
 
-def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(80e6), vf_coef=0.5, ent_coef=0.01, max_grad_norm=0.5, lr=7e-4, lrschedule='linear', epsilon=1e-5, alpha=0.99, gamma=0.99, save_interval=25000, num_env=1, frame_skip=False):
+
+def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(80e6), vf_coef=0.5, ent_coef=0.01, max_grad_norm=0.5, lr=7e-4, lrschedule='linear', epsilon=1e-5, alpha=0.99, gamma=0.99, save_interval=25000, num_env=1, frame_skip=False, level=None, level_selector=None):
     tf.reset_default_graph()
     set_global_seeds(seed)
 
     log_path = "./logs/a2c/"
     make_path(log_path)
-    log_file = log_path + game_name + ".log"
+    experiment_name = game_name
+    if level is not None:
+        experiment_name += "_lvl" + str(level)
+    if level_selector is not None:
+        experiment_name += "_lg" + level_selector.__class__.__name__
+    log_file = log_path + experiment_name + ".log"
 
     with open(log_file, "a") as myfile:
         line = "episodes; steps; frames; mean_score; std_score; min_score; max_score\n"
@@ -78,13 +77,13 @@ def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(
     #num_procs = len(env.remotes) # HACK
     model = Model(policy=policy, ob_space=ob_space, ac_space=ac_space, nenvs=nenvs, nsteps=nsteps, ent_coef=ent_coef, vf_coef=vf_coef,
         max_grad_norm=max_grad_norm, lr=lr, alpha=alpha, epsilon=epsilon, total_timesteps=total_timesteps, lrschedule=lrschedule)
-    runner = Runner(env, model, nsteps=nsteps, gamma=gamma)
+    runner = Runner(env, model, nsteps=nsteps, gamma=gamma, level_selector=level_selector)
 
     nbatch = nenvs*nsteps
     tstart = time.time()
     episodes = 0
     next_model_save = save_interval
-    model.save(game_name, 0)
+    model.save(experiment_name, 0)
     for update in range(1, total_timesteps//nbatch+1):
         obs, states, rewards, masks, actions, values = runner.run()
 
@@ -118,98 +117,67 @@ def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(
             logger.dump_tabular()
 
             with open(log_file, "a") as myfile:
-                line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(std_score) + ";" + str(min_score) + ";" + str(max_score) + "\n"
+                if level_selector is not None and isinstance(level_selector, ProgressivePCGSelector):
+                    line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(
+                        std_score) + ";" + str(min_score) + ";" + str(max_score) + ";" + str(level_selector.alpha) + "\n"
+                else:
+                    line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(std_score) + ";" + str(min_score) + ";" + str(max_score) + "\n"
                 myfile.write(line)
 
         if steps >= next_model_save:
-            model.save(game_name, next_model_save)
+            model.save(experiment_name, next_model_save)
             next_model_save += save_interval
 
     env.close()
 
-def arg_parser():
-    """
-    Create an empty argparse.ArgumentParser.
-    """
-    import argparse
-    return argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-
-def atari_arg_parser():
-    """
-    Create an argparse.ArgumentParser for run_atari.py.
-    """
-    parser = arg_parser()
-    parser.add_argument('--env', help='environment ID', default='BreakoutNoFrameskip-v4')
-    parser.add_argument('--seed', help='RNG seed', type=int, default=0)
-    parser.add_argument('--num-timesteps', type=int, default=int(10e6))
-    return parser
-
-def make_atari_env(env_id, num_env, seed, wrapper_kwargs=None, start_index=0):
-    """
-    Create a wrapped, monitored SubprocVecEnv for Atari.
-    """
-    if wrapper_kwargs is None: wrapper_kwargs = {}
-    def make_env(rank): # pylint: disable=C0111
-        def _thunk():
-            env = make_atari(env_id)
-            env.seed(seed + rank)
-            env = Monitor(env, logger.get_dir() and os.path.join(logger.get_dir(), str(rank)))
-            return wrap_deepmind(env, **wrapper_kwargs)
-        return _thunk
-    set_global_seeds(seed)
-    return SubprocVecEnv([make_env(i + start_index) for i in range(num_env)])
-
-def make_gvgai_env(env_id, num_env, seed, wrapper_kwargs=None, start_index=0, frame_skip=False):
-    #if wrapper_kwargs is None: wrapper_kwargs = {}
-    def make_env(rank): # pylint: disable=C0111
-        def _thunk():
-            env = gym.make(env_id)
-            env.seed(seed + rank)
-            env = Monitor(env, logger.get_dir() and os.path.join(logger.get_dir(), str(rank)))
-            return wrap_gvgai(env)
-        return _thunk
-    set_global_seeds(seed)
-    return SubprocVecEnv([make_env(i + start_index) for i in range(num_env)])
-
-def train(env_id, num_timesteps, seed, policy, lrschedule, num_env, save_interval, frame_skip):
-    if policy == 'cnn':
-        policy_fn = CnnPolicy
-    elif policy == 'lstm':
-        policy_fn = LstmPolicy
-    elif policy == 'lnlstm':
-        policy_fn = LnLstmPolicy
-
-    # Atari
-    #env = make_atari_env(env_id, num_env, seed)
-    #env = VecFrameStack(env, 4)
-
-    # GVG-AI
-    env = make_gvgai_env(env_id, num_env, seed)
-    #env = VecFrameStack(env, 4)
-
-    learn(policy_fn, env, seed, game_name=env_id, total_timesteps=int(num_timesteps * 1.1), lrschedule=lrschedule, num_env=num_env, nstack=1, frame_skip=frame_skip, save_interval=save_interval)
-    env.close()
-
 def main():
-    parser = arg_parser()
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
-    parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'],
-                        default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=12)
-    parser.add_argument('--num-timesteps', type=int, default=int(100e6))
-    # parser.add_argument('--env', help='environment ID', default='BreakoutNoFrameskip-v4')
-    parser.add_argument('--env', help='environment ID', default='aliens-gvgai-v0')
+    parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=2)
+    parser.add_argument('--num-timesteps', type=int, default=int(10e6))
+    parser.add_argument('--env', help='Environment ID', default='aliens')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=1000000)
+    parser.add_argument('--level', help='Level to train on', type=int, default=0)
+    parser.add_argument('--level-selector', help='Level selector to use in training', choices=[None, 'random-all', 'random-0123', 'pcg-random', 'pgc-progressive'], default=None)
     args = parser.parse_args()
-    #logger.configure() # Not sure whether this should be called
 
-    # Use args.num_timesteps
-    # Use args.env
-    #args.env = "aliens-gvgai-v0"
+    # Environment name
+    env_id = "gvgai-" + args.env
 
-    train(args.env, num_timesteps=args.num_timesteps, seed=args.seed, policy=args.policy, lrschedule=args.lrschedule, num_env=args.num_envs, save_interval=args.save_interval, frame_skip=False)
-    #evaluate(args.policy, "./models/a2c/" + args.env + "/model_episodes0_steps10.pkl", args.env, seed=1)
+    # Fixed level?
+    env_id += "-lvl" + str(args.level)
+    env_id += "-v0"
+
+    # Level selector
+    level_selector = None
+    if args.level_selector is not None:
+        make_path('./levels/')
+        path = os.path.realpath('./levels')
+        if args.level_selector == "random-all":
+            level_selector = RandomSelector(path, args.env, [0, 1, 2, 3, 4])
+        if args.level_selector == "random-0123":
+            level_selector = RandomSelector(path, args.env, [0, 1, 2, 3])
+        if args.level_selector == "pcg-random":
+            level_selector = RandomPCGSelector(path, args.env)
+        if args.level_selector == "random":
+            level_selector = ProgressivePCGSelector(path, args.env)
+
+    env = make_gvgai_env(env_id, args.num_envs, args.seed, level_selector=level_selector)
+
+    # Specify model
+    if args.policy == 'cnn':
+        policy_fn = CnnPolicy
+    elif args.policy == 'lstm':
+        policy_fn = LstmPolicy
+    elif args.policy == 'lnlstm':
+        policy_fn = LnLstmPolicy
+
+    learn(policy_fn, env, args.seed, game_name=env_id, total_timesteps=args.num_timesteps, lrschedule=args.lrschedule,
+          num_env=args.num_envs, nstack=1, frame_skip=False, save_interval=args.save_interval, level_selector=level_selector)
+
+    env.close()
 
 if __name__ == '__main__':
     main()
