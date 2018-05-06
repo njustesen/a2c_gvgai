@@ -104,11 +104,7 @@ def main():
     args = parser.parse_args()
 
     # Environment name
-    env_id = "gvgai-" + args.env
-
-    # Fixed level?
-    env_id += "-lvl" + str(args.level)
-    env_id += "-v0"
+    env_id = "gvgai-" + args.env + "-lvl" + str(args.level) + "-v0"
 
     # Level selector
     level_selector = None

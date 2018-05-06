@@ -34,14 +34,14 @@ def main():
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--model-steps', help="Local path to the trained model", type=int, default=7*1000000)
     parser.add_argument('--runs', help='Number of runs to evaluate the model', type=int, default=10)
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=5)
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=1)
     parser.add_argument('--env', help='environment ID', default='boulderdash')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--model-name', help='Name of the model', default="gvgai-boulderdash-lvl0-v0_lgRandomSelector")
-    parser.add_argument('--level', help='Level to test on', default=3)
+    parser.add_argument('--level', help='Level to test on', default=4)
     parser.add_argument('--level-selector', help='Level selector to use in training',
                         choices=[None, 'random-all', 'random-0123', 'pcg-random', 'pgc-progressive'], default=None)
-    parser.add_argument('--render', action='store_true', default=False,
+    parser.add_argument('--render', action='store_true', default=True,
                         help='Render screen (default: False)')
 
     args = parser.parse_args()
