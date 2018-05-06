@@ -19,7 +19,6 @@ def worker(remote, parent_remote, env_fn_wrapper, level_selector=None):
             ob, reward, done, info = env.step(data)
             #score += reward
             if done:
-                print("Done")
                 if level_selector is not None:
                     #level_selector.report(win)
                     level = level_selector.get_level()

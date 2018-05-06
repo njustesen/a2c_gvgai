@@ -62,9 +62,9 @@ class Model(object):
             make_path(path)
             self.saver.save(sess, path + game, global_step=steps)
 
-        def load(env_id, steps):
-            self.saver = tf.train.import_meta_graph('./models/' + env_id + '/' + env_id + '-' + str(steps) + '.meta')
-            self.saver.restore(sess, tf.train.latest_checkpoint('./models/' + env_id + '/'))
+        def load(model_name, steps):
+            self.saver = tf.train.import_meta_graph('./models/' + model_name + '/' + model_name + '-' + str(steps) + '.meta')
+            self.saver.restore(sess, tf.train.latest_checkpoint('./models/' + model_name + '/'))
 
         self.train = train
         self.train_model = train_model
