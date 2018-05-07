@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b64f2596-42ae-4568-b028-56f4703c58d5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/install.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/fs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/fs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/hilbert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/hilbert2d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/hilbert3d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/point.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/test/test-2d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/test/test-3d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/xy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/node_modules/hilbert/xyz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a2c.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +16,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/a2c_gvgai$test2.coverage" NAME="eval Coverage Results" MODIFIED="1525579307602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a2c_gvgai$test2.coverage" NAME="eval Coverage Results" MODIFIED="1525658779411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$level_generator.coverage" NAME="level_generator Coverage Results" MODIFIED="1525484935012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$plot.coverage" NAME="plot Coverage Results" MODIFIED="1525489677500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$model.coverage" NAME="model Coverage Results" MODIFIED="1525496110818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/a2c_gvgai$a2c.coverage" NAME="a2c Coverage Results" MODIFIED="1525581880036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a2c_gvgai$a2c.coverage" NAME="a2c Coverage Results" MODIFIED="1525659838590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$level_selector.coverage" NAME="level_selector Coverage Results" MODIFIED="1525464524172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -44,8 +28,8 @@
       <file leaf-file-name="eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="67" />
+            <state relative-caret-position="315">
+              <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
               <folding>
                 <element signature="e#1#24#0" expanded="true" />
               </folding>
@@ -56,7 +40,7 @@
       <file leaf-file-name="plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
+            <state relative-caret-position="716">
               <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -80,11 +64,20 @@
       <file leaf-file-name="a2c.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/a2c.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="106" column="67" selection-start-line="106" selection-start-column="67" selection-end-line="106" selection-end-column="67" />
+            <state relative-caret-position="312">
+              <caret line="111" column="39" lean-forward="true" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="109" column="7" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -104,20 +97,11 @@
       <file leaf-file-name="env.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="241">
+              <caret line="140" column="18" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="18" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -164,6 +148,7 @@
       <find>make_gvgai_env</find>
       <find>render</find>
       <find>ParamGenerator</find>
+      <find>lib</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -242,13 +227,7 @@
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="gvgai_generator" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -418,11 +397,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27321815" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3488121" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33040753" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20125392" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -529,16 +508,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-          <folding>
-            <element signature="e#1#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
@@ -811,16 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-135">
@@ -851,6 +810,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gvgai_generator/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="140" column="18" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -861,20 +843,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="67" />
+        <state relative-caret-position="315">
+          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
           <folding>
             <element signature="e#1#24#0" expanded="true" />
           </folding>
@@ -883,8 +855,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/a2c.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="106" column="67" selection-start-line="106" selection-start-column="67" selection-end-line="106" selection-end-column="67" />
+        <state relative-caret-position="312">
+          <caret line="111" column="39" lean-forward="true" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -893,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="462">
+          <caret line="109" column="7" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
         </state>
       </provider>
     </entry>
