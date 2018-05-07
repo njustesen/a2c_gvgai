@@ -44,6 +44,7 @@ def learn(policy, env, seed, game_name, nsteps=5, nstack=4, total_timesteps=int(
     episodes = 0
     next_model_save = save_interval
     model.save(experiment_name, 0)
+    steps = 0
     for update in range(1, total_timesteps//nbatch+1):
         obs, states, rewards, masks, actions, values = runner.run()
 
