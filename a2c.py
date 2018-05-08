@@ -117,7 +117,7 @@ def main():
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
     parser.add_argument('--fixed', help='Remove this..', dest='fixed', action='store_true')
-    parser.add_argument('--level-selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
+    parser.add_argument('--selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
                         choices=[None] + LevelSelector.available, default=None)
     args = parser.parse_args()
 
@@ -127,8 +127,8 @@ def main():
     # Experiment name
     make_path("./results")
     experiment_name = args.game
-    if args.level_selector is not None:
-        experiment_name += "-ls-" + args.level_selector
+    if args.selector is not None:
+        experiment_name += "-ls-" + args.selector
     else:
         experiment_name += "-lvl-" + str(args.level)
     make_path("./results/" + experiment_name)
@@ -138,7 +138,7 @@ def main():
 
     # Level selector
     level_path = './results/' + experiment_name + '/levels/' + experiment_id + '/'
-    level_selector = LevelSelector.get_selector(args.level_selector, args.game, level_path, fixed=args.fixed)
+    level_selector = LevelSelector.get_selector(args.selector, args.game, level_path, fixed=args.fixed)
 
     # Make gym environment
     env = make_gvgai_env(env_id=env_id,

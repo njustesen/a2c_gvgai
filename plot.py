@@ -7,6 +7,7 @@ import math
 import numpy as np
 from time import sleep
 import glob
+import os
 
 from baselines.a2c.utils import make_path
 
@@ -20,7 +21,6 @@ colors = bmap.mpl_colors
 
 def load(filename):
     print(filename)
-    title = filename.split(".")[0]
     data = []
     with open(filename) as file:
         lines = file.readlines()
@@ -30,35 +30,55 @@ def load(filename):
                 i += 1
                 continue
             d = line.strip().split(";")
+            if d[-1] == '':
+                d = d[:-1]
             data.append(np.array(d).astype(np.float))
     return data
 
 
-def plot(title, data, smooth=10):
+class DataPoint:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+def plot(path, title, data, smooth=10):
     print(title)
 
     color = '#1f77b4'
     plt.ticklabel_format(axis='x', style='sci', scilimits=(0, 4))
     label = "A2C"
+
+    # Create datapoints
+    points = []
+    for d in data:
+        for point in d:
+            points.append(DataPoint(point[2], point[3]))
+
+    # Sort data points
+    points.sort(key=lambda x: x.x, reverse=True)
+
     x = []
     y = []
-    smoothened_x = []
-    smoothened_y = []
-    smoothened_std = []
+    step_x = []
+    step_y = []
     ymin = []
     ymax = []
-    for d in data:
-        smoothened_x.append(d[2])
-        smoothened_y.append(d[3])
-        smoothened_std.append(d[4])
-        if len(smoothened_x) == smooth:
-            y.append(np.mean(smoothened_y))
-            x.append(np.mean(smoothened_x))
-            ymin.append(np.mean(smoothened_y) - np.mean(smoothened_std))
-            ymax.append(np.mean(smoothened_y) + np.mean(smoothened_std))
-            smoothened_x.clear()
-            smoothened_y.clear()
-            smoothened_std.clear()
+
+    for point in points:
+        step_x.append(point.x)
+        step_y.append(point.y)
+        if len(step_x) == smooth:
+            mean_y = np.mean(step_y)
+            mean_x = np.mean(step_x)
+            y.append(mean_y)
+            x.append(mean_x)
+            std_dev = np.std(step_y)
+            ymin.append(mean_y - std_dev)
+            ymax.append(mean_y + std_dev)
+            step_x.clear()
+            step_y.clear()
 
     plt.plot(x, y, linewidth=1, color=color)
     plt.fill_between(x, ymax, ymin, color=color, alpha=0.3)
@@ -69,25 +89,22 @@ def plot(title, data, smooth=10):
     #handles, labels = plt.get_legend_handles_labels()
     #plt.legend(handles, labels, loc='upper center', ncol=2, fontsize=fontsize)
 
-    make_path('./plots')
-    plt.savefig('./plots/' + title + '.pdf')
+    plt.savefig(os.path.join(path, title + '.pdf'))
 
-def arg_parser():
-    """
-    Create an empty argparse.ArgumentParser.
-    """
-    import argparse
-    return argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 def main():
-    parser = arg_parser()
-    args = parser.parse_args()
 
-    for file in glob.iglob('./logs/a2c/*.log'):
-        data = load(file)
-        title = file.split('/')[-1].split('.')[0].replace('gvgai-','').replace('-v0','').replace('-', ' ').replace('_', ' ').replace('lg', '')
-        plot(title, data)
+    for experiment_folder in glob.iglob('./results/*/'):
+        title = experiment_folder.split('/')[-2].replace('-', ' ').title()
+        path = os.path.join(experiment_folder, 'plots/')
+        data = []
+        for experiment_log in glob.iglob(os.path.join(experiment_folder, 'logs/*.log')):
+            experiment_data = load(experiment_log)
+            data.append(experiment_data)
+        make_path(path)
+        plot(path, title, data)
         plt.clf()
+
 
 if __name__ == '__main__':
     main()
