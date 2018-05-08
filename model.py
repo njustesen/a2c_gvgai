@@ -57,14 +57,13 @@ class Model(object):
             )
             return policy_loss, value_loss, policy_entropy
 
-        def save(game, steps):
-            path = './models/' + game + '/'
+        def save(path, steps):
             make_path(path)
-            self.saver.save(sess, path + game, global_step=steps)
+            self.saver.save(sess, path + 'model', global_step=steps)
 
-        def load(model_name, steps):
-            self.saver = tf.train.import_meta_graph('./models/' + model_name + '/' + model_name + '-' + str(steps) + '.meta')
-            self.saver.restore(sess, tf.train.latest_checkpoint('./models/' + model_name + '/'))
+        def load(path, steps):
+            self.saver = tf.train.import_meta_graph(path + 'model' + '-' + str(steps) + '.meta')
+            self.saver.restore(sess, tf.train.latest_checkpoint(path))
 
         self.train = train
         self.train_model = train_model

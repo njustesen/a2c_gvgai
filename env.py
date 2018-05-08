@@ -12,33 +12,34 @@ def worker(remote, parent_remote, env_fn_wrapper, level_selector=None):
     parent_remote.close()
     env = env_fn_wrapper.x()
     level_selector = level_selector
-    #score = 0
+    level = None
+    score = 0
     while True:
         cmd, data = remote.recv()
         if cmd == 'step':
             ob, reward, done, info = env.step(data)
-            #score += reward
+            score += reward
             if done:
                 if level_selector is not None:
-                    #level_selector.report(win)
+                    level_selector.report(level, False if info['winner'] == 'PLAYER_LOSES' else True)
                     level = level_selector.get_level()
                     env.unwrapped._setLevel(level)
                 ob = env.reset()
-                #score = 0
+                score = 0
             remote.send((ob, reward, done, info))
         elif cmd == 'reset':
             if level_selector is not None:
                 level = level_selector.get_level()
                 env.unwrapped._setLevel(level)
             ob = env.reset()
-            #score = 0
+            score = 0
             remote.send(ob)
         elif cmd == 'reset_task':
             ob = env.reset_task()
             remote.send(ob)
         elif cmd == 'close':
             remote.close()
-            #score = 0
+            score = 0
             break
         elif cmd == 'render':
             env.render()
