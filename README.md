@@ -92,5 +92,5 @@ python plot.py
   
 ## Transfer Experiments between Servers
 You can either:
-1. Move a subfolder within .results/ from server A to .resuts/ on server B. This will copy all experiments of that type.
-2. Move individual folders within ./results/<experiments-name>/models/ and ./results/<experiments-name>/logs/ from A to B.
+1. Move a subfolder within `.results/` from server A to `.resuts/` on server B. This will copy all experiments of that type.
+2. Move individual folders within `./results/<experiments-name>/models/` and `./results/<experiments-name>/logs/` from A to B.
