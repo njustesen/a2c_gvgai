@@ -51,7 +51,7 @@ def main():
 
     # Test name
     test_name = args.game
-    if args.level_selector is not None:
+    if args.selector is not None:
         test_name += "-ls-" + args.selector
     else:
         test_name += "-lvl-" + str(args.level)
