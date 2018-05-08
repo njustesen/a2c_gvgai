@@ -38,7 +38,7 @@ def main():
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--experiment-name', help='Name of the experiment to evaluate, e.g. zelda-ls-pcg-random', default="zelda-lvl-0")
     parser.add_argument('--level', help='Level to test on', default=0)
-    parser.add_argument('--level-selector',
+    parser.add_argument('--selector',
                         help='Level selector to use in test - will ignore the level argument if set (default: None)',
                         choices=[None] + LevelSelector.available, default=None)
     parser.add_argument('--render', action='store_true', default=False,
@@ -52,7 +52,7 @@ def main():
     # Test name
     test_name = args.game
     if args.level_selector is not None:
-        test_name += "-ls-" + args.level_selector
+        test_name += "-ls-" + args.selector
     else:
         test_name += "-lvl-" + str(args.level)
 
@@ -68,7 +68,7 @@ def main():
         myfile.write('experiment_id;mean_score;std_score;runs\n')
 
     # Level selector
-    level_selector = LevelSelector.get_selector(args.level_selector, args.game, level_path)
+    level_selector = LevelSelector.get_selector(args.selector, args.game, level_path)
 
     mean_scores = []
     std_scores = []
