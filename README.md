@@ -5,7 +5,7 @@
 2. Install gvgai-gym
 3. Install baselines
 4. Run `sh lib/gvgai-generator/install.sh` to install the level generator.
-5. Run: `pip install brewer2mpl`
+5. Run `pip install brewer2mpl`
 
 ## How to Train
 ```
