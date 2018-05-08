@@ -5,7 +5,7 @@
 2. Install gvgai-gym
 3. Install baselines
 4. Run `sh lib/gvgai-generator/install.sh` to install the level generator.
-5. Run: `pip install brewer2mpl`
+5. Run `pip install brewer2mpl`
 
 ## How to Train
 ```
@@ -92,5 +92,5 @@ python plot.py
   
 ## Transfer Experiments between Servers
 You can either:
-1. Move a subfolder within .results/ from server A to .resuts/ on server B. This will copy all experiments of that type.
-2. Move individual folders within ./results/<experiments-name>/models/ and ./results/<experiments-name>/logs/ from A to B.
+1. Move a subfolder within `.results/` from server A to `.resuts/` on server B. This will copy all experiments of that type.
+2. Move individual folders within `./results/<experiments-name>/models/` and `./results/<experiments-name>/logs/` from A to B.
