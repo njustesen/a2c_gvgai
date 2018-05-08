@@ -35,7 +35,7 @@ class LevelSelector(object):
                  'pcg-progressive']
 
     @staticmethod
-    def get_selector(selector_name, game, path):
+    def get_selector(selector_name, game, path, fixed=False):
         if selector_name is not None:
             make_path(path)
             path = os.path.realpath(path)
@@ -50,7 +50,7 @@ class LevelSelector(object):
                 return RandomPCGSelector(path, game)
             elif selector_name.startswith('pcg-random-'):
                 difficulty = float(selector_name.split('pcg-random-')[1]) * 0.1
-                return RandomWithDifPCGSelector(path, game, difficulty)
+                return RandomWithDifPCGSelector(path, game, difficulty, fixed=fixed)
             elif selector_name == "pcg-progressive":
                 return ProgressivePCGSelector(path, game)
         return None
@@ -126,14 +126,19 @@ class RandomPCGSelector(LevelSelector):
 
 class RandomWithDifPCGSelector(LevelSelector):
 
-    def __init__(self, dir, game, difficulty):
+    def __init__(self, dir, game, difficulty, fixed=False):
         super().__init__(dir, game)
         self.difficulty = difficulty
+        self.fixed = fixed
         size = game_sizes[game]
         self.generator = ParamGenerator(self.dir, self.game, width=size[0], height=size[1])
+        self.last_level = None
 
     def get_level(self):
-        return self.generator.generate([self.difficulty], difficulty=True)
+        if self.fixed and self.last_level is not None:
+            return self.last_level
+        self.last_level = self.generator.generate([self.difficulty], difficulty=True)
+        return self.last_level
 
     def report(self, level_id, win):
         pass

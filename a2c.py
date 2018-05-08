@@ -110,12 +110,13 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=2)
-    parser.add_argument('--num-timesteps', type=int, default=int(10e3))
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=12)
+    parser.add_argument('--num-timesteps', type=int, default=int(10e6))
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
-    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e3))
+    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
+    parser.add_argument('--fixed', help='Remove this..', dest='fixed', action='store_true')
     parser.add_argument('--level-selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
                         choices=[None] + LevelSelector.available, default=None)
     args = parser.parse_args()
@@ -137,7 +138,7 @@ def main():
 
     # Level selector
     level_path = './results/' + experiment_name + '/levels/' + experiment_id + '/'
-    level_selector = LevelSelector.get_selector(args.level_selector, args.game, level_path)
+    level_selector = LevelSelector.get_selector(args.level_selector, args.game, level_path, fixed=args.fixed)
 
     # Make gym environment
     env = make_gvgai_env(env_id=env_id,
