@@ -57,7 +57,7 @@ def main():
         test_name += "-lvl-" + str(args.level)
 
     # Folders
-    score_path = './results/' + args.experiment_name + '/eval/scores/'
+    score_path = './results/' + args.experiment_name + '/eval/' + test_name + '/scores/'
     level_path = './results/' + args.experiment_name + '/eval/' + test_name + '/levels/'
     make_path(level_path)
     make_path(score_path)
