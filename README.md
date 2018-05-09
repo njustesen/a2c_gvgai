@@ -46,10 +46,10 @@ optional arguments:
 
 Examples:
 ```
-Python a2c.py --env aliens --level 4
+python a2c.py --env aliens --level 4
 ```
 ```
-Python a2c.py --env boulderdash --selector pcg-random-3
+python a2c.py --env boulderdash --selector pcg-random-3
 ```
 ## How to evaluate
 eval.py will evaluate all models in an experiment folder.
