@@ -34,7 +34,8 @@ class LevelSelector(object):
                  'pcg-random-8',
                  'pcg-random-9',
                  'pcg-random-10',
-                 'pcg-progressive']
+                 'pcg-progressive',
+                 'pcg-progressive-fixed']
 
     @staticmethod
     def get_selector(selector_name, game, path, fixed=False):
@@ -63,6 +64,8 @@ class LevelSelector(object):
                 selector = manager.RandomWithDifPCGSelector(path, game, difficulty, fixed=fixed)
             elif selector_name == "pcg-progressive":
                 selector = manager.ProgressivePCGSelector(path, game)
+            elif selector_name == "pcg-progressive-fixed":
+                selector = manager.ProgressivePCGSelector(path, game, upper_limit=False)
             else:
                 raise Exception("Unknown level selector: + " + selector_name)
         else:
@@ -89,6 +92,9 @@ class LevelSelector(object):
         '''
         raise NotImplementedError
 
+    def get_info(self):
+        raise NotImplementedError
+
 game_sizes = {
     "aliens": [30, 11],
     "zelda": [13, 9],
@@ -109,6 +115,9 @@ class RandomSelector(LevelSelector):
     def report(self, level_id, win):
         pass
 
+    def get_info(self):
+        return ""
+
 
 class RandomWithDifSelector(LevelSelector):
 
@@ -124,6 +133,9 @@ class RandomWithDifSelector(LevelSelector):
     def report(self, level_id, win):
         pass
 
+    def get_info(self):
+        return ""
+
 
 class RandomPCGSelector(LevelSelector):
 
@@ -137,6 +149,9 @@ class RandomPCGSelector(LevelSelector):
 
     def report(self, level_id, win):
         pass
+
+    def get_info(self):
+        return ""
 
 
 class RandomWithDifPCGSelector(LevelSelector):
@@ -158,27 +173,37 @@ class RandomWithDifPCGSelector(LevelSelector):
     def report(self, level_id, win):
         pass
 
+    def get_info(self):
+        return ""
+
 
 class ProgressivePCGSelector(LevelSelector):
     '''
     TODO: Shared object across workers.
     '''
-    def __init__(self, dir, game, alpha=0.01):
+    def __init__(self, dir, game, alpha=0.01, upper_limit=True):
         super().__init__(dir, game)
         size = game_sizes[game]
         self.generator = ParamGenerator(self.dir, self.game, width=size[0], height=size[1])
         self.difficulty = 0
         self.alpha = alpha
+        self.upper_limit = upper_limit
 
     def get_level(self):
-        return self.generator.generate([self.difficulty], difficulty=True)
+        if not self.upper_limit:
+            return self.generator.generate([self.difficulty], difficulty=True)
+
+        dif = random.uniform(0.0, self.difficulty)
+        return self.generator.generate([dif], difficulty=True)
 
     def report(self, level_id, win):
-        print(str(win) + "->" + str(self.difficulty))
         if win:
             self.difficulty = min(1.0, self.difficulty + self.alpha)
         else:
             self.difficulty = max(0.0, self.difficulty - self.alpha)
+
+    def get_info(self):
+        return str(self.difficulty)
 
 #sel = RandomPCGSelector("./", "zelda")
 #level = sel.get_level()

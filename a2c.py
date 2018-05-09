@@ -27,8 +27,8 @@ def learn(policy, env, experiment_name, experiment_id, seed, nsteps=5, total_tim
 
     # Create log file
     with open(log_file, "a") as myfile:
-        line = "episodes; steps; frames; mean_score; std_score; min_score; max_score; difficulty\n"
-        myfile.write(line)
+            line = "episodes; steps; frames; mean_score; std_score; min_score; max_score; difficulty\n"
+            myfile.write(line)
 
     # Model folder path
     model_path = "./results/" + experiment_name + "/models/" + experiment_id + "/"
@@ -52,6 +52,7 @@ def learn(policy, env, experiment_name, experiment_id, seed, nsteps=5, total_tim
     next_model_save = save_interval
     model.save(model_path, 0)
     steps = 0
+
     for update in range(1, total_timesteps//nbatch+1):
         obs, states, rewards, masks, actions, values = runner.run()
 
@@ -84,15 +85,12 @@ def learn(policy, env, experiment_name, experiment_id, seed, nsteps=5, total_tim
             logger.record_tabular("frames", frames)
             logger.record_tabular("episodes", episodes)
             logger.record_tabular("fps", fps)
+            logger.record_tabular("difficulty", level_selector.get_info())
             logger.dump_tabular()
 
             # Log to file
             with open(log_file, "a") as myfile:
-                if level_selector is not None and isinstance(level_selector, ProgressivePCGSelector):
-                    line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(
-                        std_score) + ";" + str(min_score) + ";" + str(max_score) + ";" + str(level_selector.difficulty) + "\n"
-                else:
-                    line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(std_score) + ";" + str(min_score) + ";" + str(max_score) + ";\n"
+                line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(std_score) + ";" + str(min_score) + ";" + str(max_score) + ";" + level_selector.get_info() + "\n"
                 myfile.write(line)
 
         # Save model
@@ -110,13 +108,12 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=12)
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=2)
     parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(10e6))
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
-    parser.add_argument('--fixed', help='Remove this..', dest='fixed', action='store_true')
     parser.add_argument('--selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
                         choices=[None] + LevelSelector.available, default=None)
     args = parser.parse_args()
@@ -138,7 +135,7 @@ def main():
 
     # Level selector
     level_path = './results/' + experiment_name + '/levels/' + experiment_id + '/'
-    level_selector = LevelSelector.get_selector(args.selector, args.game, level_path, fixed=args.fixed)
+    level_selector = LevelSelector.get_selector(args.selector, args.game, level_path)
 
     # Make gym environment
     env = make_gvgai_env(env_id=env_id,

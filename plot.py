@@ -38,40 +38,69 @@ def load(filename):
 
 class DataPoint:
 
-    def __init__(self, x, y):
+    def __init__(self, x, y, d=None):
         self.x = x
         self.y = y
+        self.d = d
 
 
 def plot(path, title, data, smooth=10):
     print(title)
 
     color = '#1f77b4'
-    plt.ticklabel_format(axis='x', style='sci', scilimits=(0, 4))
+    color_d = '#d62728'
+
+    fig, ax1 = plt.subplots()
+
+    ax1.ticklabel_format(axis='x', style='sci', scilimits=(0, 4))
     label = "A2C"
 
     # Create datapoints
     points = []
     for d in data:
         for point in d:
-            points.append(DataPoint(point[2], point[3]))
+            if len(point) < 8:
+                points.append(DataPoint(point[2], point[3]))
+            else:
+                points.append(DataPoint(point[2], point[3], d=point[7]))
 
     # Sort data points
-    points.sort(key=lambda x: x.x, reverse=True)
+    points.sort(key=lambda x: x.x, reverse=False)
 
     x = []
     y = []
+    d = []
     step_x = []
     step_y = []
+    step_d = []
     ymin = []
     ymax = []
+    dmin = []
+    dmax = []
 
     for point in points:
         step_x.append(point.x)
         step_y.append(point.y)
+        if len(x) == 0 and smooth > 1 and False:
+            x.append(point.x)
+            y.append(point.y)
+            ymin.append(point.y)
+            ymax.append(point.y)
+            if point.d is not None:
+                d.append(point.d)
+                dmin.append(point.d)
+                dmax.append(point.d)
+        if point.d is not None:
+            step_d.append(point.d)
         if len(step_x) == smooth:
             mean_y = np.mean(step_y)
             mean_x = np.mean(step_x)
+            if point.d is not None:
+                mean_d = np.mean(step_d)
+                d.append(mean_d)
+                std_dev_d = np.std(step_d)
+                dmin.append(mean_d - std_dev_d)
+                dmax.append(mean_d + std_dev_d)
             y.append(mean_y)
             x.append(mean_x)
             std_dev = np.std(step_y)
@@ -79,23 +108,37 @@ def plot(path, title, data, smooth=10):
             ymax.append(mean_y + std_dev)
             step_x.clear()
             step_y.clear()
+            step_d.clear()
 
-    plt.plot(x, y, linewidth=1, color=color)
-    plt.fill_between(x, ymax, ymin, color=color, alpha=0.3)
+    lns1 = ax1.plot(x, y, linewidth=1, color=color, label="Mean score")
+    lns = lns1
+    ax1.fill_between(x, ymax, ymin, color=color, alpha=0.3)
+    if len(d) > 0:
+        ax2 = ax1.twinx()
+        lns2 = ax2.plot(x, d, linewidth=1, color=color_d, label="Difficulty")
+        lns += lns2
+        ax2.set_ylabel('Difficulty')
+        ax2.set_ylim([0, 1])
+        #ax2.axis('off')
+        ax2.grid(False)
+        #ax1.fill_between(x, dmax, dmin, color=color_d, alpha=0.3)
     plt.title(title, fontsize=fontsize)
-    plt.ylabel('Score')
-    plt.xlabel('Steps')
+    ax1.set_ylabel('Score')
+    ax1.set_xlabel('Steps')
+    labs = [l.get_label() for l in lns]
+    ax1.legend(lns, labs, loc=0)
 
     #handles, labels = plt.get_legend_handles_labels()
     #plt.legend(handles, labels, loc='upper center', ncol=2, fontsize=fontsize)
-
-    plt.savefig(os.path.join(path, title + '.pdf'))
+    fig.tight_layout()
+    fig.savefig(os.path.join(path, title + '.pdf'))
 
 
 def main():
 
     for experiment_folder in glob.iglob('./results/*/'):
         title = experiment_folder.split('/')[-2].replace('-', ' ').title()
+        title = title.replace('Pcg', 'PCG').replace('Ls ', '')
         path = os.path.join(experiment_folder, 'plots/')
         data = []
         for experiment_log in glob.iglob(os.path.join(experiment_folder, 'logs/*.log')):
