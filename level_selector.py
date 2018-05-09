@@ -3,6 +3,8 @@ import random
 from level_generator import ParamGenerator
 import glob
 from baselines.a2c.utils import make_path
+from multiprocessing import Process, Manager
+from multiprocessing.managers import BaseManager
 
 
 class LevelSelector(object):
@@ -36,24 +38,37 @@ class LevelSelector(object):
 
     @staticmethod
     def get_selector(selector_name, game, path, fixed=False):
+
+        # Register classes for sharing across procs
+        for c in [RandomSelector, RandomWithDifSelector, RandomPCGSelector, RandomWithDifPCGSelector, ProgressivePCGSelector]:
+            BaseManager.register(c.__name__, c)
+        manager = BaseManager()
+        manager.start()
+
+        # Determine selector
         if selector_name is not None:
             make_path(path)
             path = os.path.realpath(path)
             if selector_name == "random-all":
-                return RandomSelector(path, game, [0, 1, 2, 3, 4])
+                selector = manager.RandomSelector(path, game, [0, 1, 2, 3, 4])
             elif selector_name == "random-0123":
-                return RandomSelector(path, game, [0, 1, 2, 3])
+                selector = manager.RandomSelector(path, game, [0, 1, 2, 3])
             elif selector_name.startswith('random-'):
                 difficulty = float(selector_name.split('random-')[1]) * 0.1
-                return RandomWithDifSelector(path, game, difficulty)
+                selector = manager.RandomWithDifSelector(path, game, difficulty)
             elif selector_name == "pcg-random":
-                return RandomPCGSelector(path, game)
+                selector = manager.RandomPCGSelector(path, game)
             elif selector_name.startswith('pcg-random-'):
                 difficulty = float(selector_name.split('pcg-random-')[1]) * 0.1
-                return RandomWithDifPCGSelector(path, game, difficulty, fixed=fixed)
+                selector = manager.RandomWithDifPCGSelector(path, game, difficulty, fixed=fixed)
             elif selector_name == "pcg-progressive":
-                return ProgressivePCGSelector(path, game)
-        return None
+                selector = manager.ProgressivePCGSelector(path, game)
+            else:
+                raise Exception("Unknown level selector: + " + selector_name)
+        else:
+            return None
+
+        return selector
 
     def __init__(self, dir, game):
         self.dir = dir
@@ -159,6 +174,7 @@ class ProgressivePCGSelector(LevelSelector):
         return self.generator.generate([self.difficulty], difficulty=True)
 
     def report(self, level_id, win):
+        print(str(win) + "->" + str(self.difficulty))
         if win:
             self.difficulty = min(1.0, self.difficulty + self.alpha)
         else:
