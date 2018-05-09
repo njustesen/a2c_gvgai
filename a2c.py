@@ -112,7 +112,7 @@ def main():
     parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(20e6))
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
-    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(5e6))
+    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
     parser.add_argument('--selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
                         choices=[None] + LevelSelector.available, default=None)
