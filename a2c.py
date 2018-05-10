@@ -85,12 +85,16 @@ def learn(policy, env, experiment_name, experiment_id, seed, nsteps=5, total_tim
             logger.record_tabular("frames", frames)
             logger.record_tabular("episodes", episodes)
             logger.record_tabular("fps", fps)
-            logger.record_tabular("difficulty", level_selector.get_info())
+            if level_selector is not None:
+                logger.record_tabular("difficulty", str(level_selector.get_info()))
             logger.dump_tabular()
 
             # Log to file
             with open(log_file, "a") as myfile:
-                line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(std_score) + ";" + str(min_score) + ";" + str(max_score) + ";" + level_selector.get_info() + "\n"
+                dif = ""
+                if level_selector is not None:
+                    dif = str(level_selector.get_info())
+                line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(std_score) + ";" + str(min_score) + ";" + str(max_score) + ";" + dif + "\n"
                 myfile.write(line)
 
         # Save model
@@ -108,7 +112,7 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=12)
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=2)
     parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(20e6))
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
