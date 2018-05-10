@@ -10,6 +10,7 @@ else
         brew install node
     fi 
 fi
+sudo apt-get install npm
 
 npm install hilbert
 npm install fs

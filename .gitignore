@@ -110,6 +110,13 @@ plots/
 levels/
 results/
 
+# Installed Dependencies
+install/*.tgz
+install/*.deb
+install/cuda/
+install/baselines/
+install/GVGAI_GYM/
+
 .DS_Store
 */.DS_Store
 */node_modules/

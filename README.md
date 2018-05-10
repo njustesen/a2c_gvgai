@@ -4,7 +4,7 @@
 1. Install gym
 2. Install gvgai-gym
 3. Install baselines
-4. Run `sh lib/gvgai-generator/install.sh` to install the level generator.
+4. Run `sh lib/gvgai_generator/install.sh` to install the level generator.
 5. Run `pip install brewer2mpl`
 
 ## How to Train
@@ -46,10 +46,10 @@ optional arguments:
 
 Examples:
 ```
-python a2c.py --env aliens --level 4
+python a2c.py --game aliens --level 4
 ```
 ```
-python a2c.py --env boulderdash --selector pcg-random-3
+python a2c.py --game boulderdash --selector pcg-random-3
 ```
 ## How to evaluate
 eval.py will evaluate all models in an experiment folder.
