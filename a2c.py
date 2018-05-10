@@ -112,7 +112,7 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=2)
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=12)
     parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(20e6))
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
