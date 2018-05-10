@@ -6,7 +6,7 @@
 sudo apt-get install python3-pip python3-dev
 
 #Install Prerequisits
-sudo apt-get install git cmake libopenmpi-dev python3-dev zlib1g-dev
+sudo apt-get install git curl cmake libopenmpi-dev python3-dev zlib1g-dev
 
 #Install image processing libraries
 sudo pip3 install pillowsudo 
