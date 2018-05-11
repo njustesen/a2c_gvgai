@@ -70,6 +70,7 @@ def main():
     # Level selector
     level_selector = LevelSelector.get_selector(args.selector, args.game, level_path)
 
+    # Main plots per experiment
     mean_scores = []
     std_scores = []
     model_path = './results/' + args.experiment_name + '/models/'

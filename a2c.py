@@ -112,14 +112,15 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=12)
-    parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(20e6))
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=2)
+    parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(10e2))
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
+    parser.add_argument('--repetitions', help='Number of repetions to run sequentially (default=1)', type=int, default=10)
     parser.add_argument('--selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
-                        choices=[None] + LevelSelector.available, default=None)
+                        choices=[None] + LevelSelector.available, default="pcg-random-3")
     args = parser.parse_args()
 
     # Gym environment name
@@ -134,43 +135,49 @@ def main():
         experiment_name += "-lvl-" + str(args.level)
     make_path("./results/" + experiment_name)
 
-    # Unique id for experiment
-    experiment_id = str(uuid.uuid1())
+    for i in range(args.repetitions):
 
-    # Level selector
-    level_path = './results/' + experiment_name + '/levels/' + experiment_id + '/'
-    level_selector = LevelSelector.get_selector(args.selector, args.game, level_path)
+        print("Starting experiment " + str(i+1) + " of " + str(args.repetitions+1))
 
-    # Make gym environment
-    env = make_gvgai_env(env_id=env_id,
-                         num_env=args.num_envs,
-                         seed=args.seed,
-                         level_selector=level_selector)
+        # Unique id for experiment
+        experiment_id = str(uuid.uuid1())
 
-    # Atari
-    #env_id = "BreakoutNoFrameskip-v4"
-    #env = make_atari_env(env_id, args.num_envs, args.seed)
+        # Level selector
+        level_path = './results/' + experiment_name + '/levels/' + experiment_id + '/'
+        level_selector = LevelSelector.get_selector(args.selector, args.game, level_path)
 
-    # Select model
-    if args.policy == 'cnn':
-        policy_fn = CnnPolicy
-    elif args.policy == 'lstm':
-        policy_fn = LstmPolicy
-    elif args.policy == 'lnlstm':
-        policy_fn = LnLstmPolicy
+        # Make gym environment
+        env = make_gvgai_env(env_id=env_id,
+                             num_env=args.num_envs,
+                             seed=args.seed,
+                             level_selector=level_selector)
 
-    learn(policy=policy_fn,
-          env=env,
-          experiment_name=experiment_name,
-          experiment_id=experiment_id,
-          seed=args.seed,
-          total_timesteps=args.num_timesteps,
-          lrschedule=args.lrschedule,
-          frame_skip=False,
-          save_interval=args.save_interval,
-          level_selector=level_selector)
+        # Atari
+        #env_id = "BreakoutNoFrameskip-v4"
+        #env = make_atari_env(env_id, args.num_envs, args.seed)
 
-    env.close()
+        # Select model
+        if args.policy == 'cnn':
+            policy_fn = CnnPolicy
+        elif args.policy == 'lstm':
+            policy_fn = LstmPolicy
+        elif args.policy == 'lnlstm':
+            policy_fn = LnLstmPolicy
+
+        learn(policy=policy_fn,
+              env=env,
+              experiment_name=experiment_name,
+              experiment_id=experiment_id,
+              seed=args.seed,
+              total_timesteps=args.num_timesteps,
+              lrschedule=args.lrschedule,
+              frame_skip=False,
+              save_interval=args.save_interval,
+              level_selector=level_selector)
+
+        env.close()
+
+        print("Experiment done")
 
 
 if __name__ == '__main__':

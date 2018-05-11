@@ -44,6 +44,87 @@ class DataPoint:
         self.d = d
 
 
+def plot_mixed(path, title, titles, datasets, smooth=10):
+    print(title)
+
+    colors = ['#1f77b4', '#d62728', '#27d628', '#d627d6']
+
+    fig, ax = plt.subplots()
+
+    ax.ticklabel_format(axis='x', style='sci', scilimits=(0, 4))
+
+    i = 0
+    for data in datasets:
+        color = colors[i]
+
+        # Create datapoints
+        points = []
+        for d in data:
+            for point in d:
+                if len(point) < 8:
+                    points.append(DataPoint(point[2], point[3]))
+                else:
+                    points.append(DataPoint(point[2], point[3], d=point[7]))
+
+        # Sort data points
+        points.sort(key=lambda x: x.x, reverse=False)
+
+        x = []
+        y = []
+        d = []
+        step_x = []
+        step_y = []
+        step_d = []
+        ymin = []
+        ymax = []
+        dmin = []
+        dmax = []
+
+        for point in points:
+            step_x.append(point.x)
+            step_y.append(point.y)
+            if len(x) == 0 and smooth > 1 and False:
+                x.append(point.x)
+                y.append(point.y)
+                ymin.append(point.y)
+                ymax.append(point.y)
+                if point.d is not None:
+                    d.append(point.d)
+                    dmin.append(point.d)
+                    dmax.append(point.d)
+            if point.d is not None:
+                step_d.append(point.d)
+            if len(step_x) == smooth:
+                mean_y = np.mean(step_y)
+                mean_x = np.mean(step_x)
+                if point.d is not None:
+                    mean_d = np.mean(step_d)
+                    d.append(mean_d)
+                    std_dev_d = np.std(step_d)
+                    dmin.append(mean_d - std_dev_d)
+                    dmax.append(mean_d + std_dev_d)
+                y.append(mean_y)
+                x.append(mean_x)
+                std_dev = np.std(step_y)
+                ymin.append(mean_y - std_dev)
+                ymax.append(mean_y + std_dev)
+                step_x.clear()
+                step_y.clear()
+                step_d.clear()
+
+        lns1 = ax.plot(x, y, linewidth=1, color=color, label=titles[i])
+        ax.fill_between(x, ymax, ymin, color=color, alpha=0.3)
+        plt.title(title, fontsize=fontsize)
+        ax.set_ylabel('Score')
+        ax.set_xlabel('Steps')
+        i += 1
+
+    handles, labels = ax.get_legend_handles_labels()
+    ax.legend(handles, labels, loc='upper left', fontsize=fontsize)
+    fig.tight_layout()
+    fig.savefig(os.path.join(path, title + '.pdf'))
+
+
 def plot(path, title, data, smooth=10):
     print(title)
 
@@ -113,6 +194,7 @@ def plot(path, title, data, smooth=10):
     lns1 = ax1.plot(x, y, linewidth=1, color=color, label="Mean score")
     lns = lns1
     ax1.fill_between(x, ymax, ymin, color=color, alpha=0.3)
+    ax2 = None
     if len(d) > 0:
         ax2 = ax1.twinx()
         lns2 = ax2.plot(x, d, linewidth=1, color=color_d, label="Difficulty")
@@ -126,7 +208,8 @@ def plot(path, title, data, smooth=10):
     ax1.set_ylabel('Score')
     ax1.set_xlabel('Steps')
     labs = [l.get_label() for l in lns]
-    ax1.legend(lns, labs, loc=0)
+    if ax2 is not None:
+        ax1.legend(lns, labs, loc=0)
 
     #handles, labels = plt.get_legend_handles_labels()
     #plt.legend(handles, labels, loc='upper center', ncol=2, fontsize=fontsize)
@@ -136,6 +219,7 @@ def plot(path, title, data, smooth=10):
 
 def main():
 
+    # Main plot for each experiment
     for experiment_folder in glob.iglob('./results/*/'):
         title = experiment_folder.split('/')[-2].replace('-', ' ').title()
         title = title.replace('Pcg', 'PCG').replace('Ls ', '')
@@ -146,6 +230,24 @@ def main():
             data.append(experiment_data)
         make_path(path)
         plot(path, title, data)
+        plt.clf()
+
+    # Mixed plot for each experiment
+    titles = []
+    datasets = []
+    for experiment_folder in glob.iglob('./results/*pcg-random*/'):
+        title = experiment_folder.split('/')[-2].replace('-', ' ').title()
+        title = title.replace('Pcg', 'PCG').replace('Ls ', '')
+        data = []
+        for experiment_log in glob.iglob(os.path.join(experiment_folder, 'logs/*.log')):
+            experiment_data = load(experiment_log)
+            data.append(experiment_data)
+        datasets.append(data)
+        titles.append(title)
+    if len(titles) > 0:
+        path = './results/plots/'
+        make_path(path)
+        plot_mixed(path, "PCG with Fixed Difficulty", titles, datasets)
         plt.clf()
 
 
