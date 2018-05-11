@@ -66,7 +66,7 @@ optional arguments:
   --policy {cnn,lstm,lnlstm}
                         Policy architecture (default: cnn)
   --runs RUNS           Number of runs for each model (default: 100)
-  --num-envs NUM_ENVS   Number of environments/workers to run in parallel (default: 1)
+  --num-envs NUM_ENVS   Number of environments/workers to run in parallel (default: 12)
   --game GAME           Game name (default=zelda) (default: zelda)
   --seed SEED           RNG seed (default: 0)
   --experiment-name EXPERIMENT_NAME
