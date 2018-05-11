@@ -118,7 +118,7 @@ def main():
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
-    parser.add_argument('--repetitions', help='Number of repetions to run sequentially (default=1)', type=int, default=11)
+    parser.add_argument('--repetitions', help='Number of repetions to run sequentially (default=1)', type=int, default=1)
     parser.add_argument('--selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
                         choices=[None] + LevelSelector.available, default="pcg-random-3")
     args = parser.parse_args()
