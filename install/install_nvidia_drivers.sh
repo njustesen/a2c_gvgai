@@ -10,6 +10,10 @@ sudo apt-get upgrade
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
  
-#Install the recommended driver (currently nvidia-378)
-sudo ubuntu-drivers autoinstall
+#Remove old drivers
+sudo apt-get purge nvidia*
+
+#Install the recommended driver for CUDA 9.0 (currently nvidia-384.xx)
+#sudo ubuntu-drivers autoinstall
+sudo apt-get nvidia-384
 sudo reboot
