@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b64f2596-42ae-4568-b028-56f4703c58d5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/a2c.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,8 +71,8 @@
       <file leaf-file-name="a2c.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/a2c.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="138" selection-start-line="138" selection-end-line="138" />
+            <state relative-caret-position="263">
+              <caret line="115" column="116" selection-start-line="115" selection-start-column="116" selection-end-line="115" selection-end-column="116" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -85,7 +83,7 @@
       <file leaf-file-name="level_generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/level_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
+            <state relative-caret-position="285">
               <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -151,8 +149,8 @@
       <find>color =</find>
       <find>fixed</find>
       <find>get_info</find>
-      <find>experiment_name =</find>
       <find>ProgressivePCGSelector</find>
+      <find>experiment_name =</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -251,6 +249,12 @@
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="zelda-ls-pcg-random-3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -415,15 +419,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="23" width="1641" height="1005" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.50220263" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26431718" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18699187" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18699187" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -711,9 +716,6 @@
     <entry file="file://$PROJECT_DIR$/results/zelda-ls-pcg-progressive/levels/41473c5e-539a-11e8-920c-6c4008b68262/zelda_00ad134a-539e-11e8-ac41-6c4008b68262_dif0.29.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gvgai_generator/install.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
@@ -744,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/level_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eval.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
@@ -781,10 +773,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/level_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gvgai_generator/install.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/a2c.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="138" selection-start-line="138" selection-end-line="138" />
+        <state relative-caret-position="263">
+          <caret line="115" column="116" selection-start-line="115" selection-start-column="116" selection-end-line="115" selection-end-column="116" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
