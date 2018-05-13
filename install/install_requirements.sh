@@ -16,15 +16,15 @@ sudo pip3 install pillow
 sudo pip3 install opencv-python
 
 #Install Tensorflow
-pip3 install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.8.0-cp36-cp36m-linux_x86_64.whl
-#sudo pip3 install tensorflow_gpu
+#sudo pip3 install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.8.0-cp36-cp36m-linux_x86_64.whl
+sudo pip3 install tensorflow_gpu
 
 #Install GVGAI-GYM
-sudo git clone https://github.com/rubenrtorrado/GVGAI_GYM.git
+git clone https://github.com/rubenrtorrado/GVGAI_GYM.git
 sudo pip3 install -e ./GVGAI_GYM
 
 #Install Baselines
-sudo git clone https://github.com/openai/baselines.git
+git clone https://github.com/openai/baselines.git
 sudo pip3 install -e ./baselines
 
 #Install A2C-Code
