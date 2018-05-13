@@ -28,6 +28,7 @@ optional arguments:
   --game GAME           Game name (default=zelda) (default: zelda)
   --seed SEED           RNG seed (default: 0)
   --save-interval SAVE_INTERVAL
+  --resume EXP_ID       The experiment id to resume (default: None)
                         Model saving interval in steps (default: 1000000)
   --level LEVEL         Id of existing GVG-AI level (integer) to train on (default: 0)
   --fixed               A hack to enable a selector to always use the first generated level. Should be removed asap (default: False)
