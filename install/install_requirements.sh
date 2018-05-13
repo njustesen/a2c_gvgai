@@ -6,7 +6,10 @@
 sudo apt-get install python3-pip python3-dev
 
 #Install Prerequisits
-sudo apt-get install git curl cmake libopenmpi-dev python3-dev zlib1g-dev
+sudo apt-get install git curl cmake libopenmpi-dev python3-dev zlib1g-dev, cython
+
+#Install Java
+sudo apt-get install openjdk-8-jdk
 
 #Install image processing libraries
 sudo pip3 install pillow
