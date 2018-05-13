@@ -152,16 +152,16 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=2)
-    parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(10e6))
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=12)
+    parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(20e6))
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
-    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e3))
+    parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
-    parser.add_argument('--resume', help='The experiment id to resume', default='90fe9d4c-56e4-11e8-a58c-6c4008b68262')
+    parser.add_argument('--resume', help='The experiment id to resume', default=None)
     parser.add_argument('--repetitions', help='Number of repetitions to run sequentially (default=1)', type=int, default=1)
     parser.add_argument('--selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
-                        choices=[None] + LevelSelector.available, default='pcg-random-3')
+                        choices=[None] + LevelSelector.available, default=None)
     args = parser.parse_args()
 
     # Gym environment name
