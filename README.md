@@ -52,6 +52,10 @@ python a2c.py --game aliens --level 4
 ```
 python a2c.py --game boulderdash --selector pcg-random-3
 ```
+```
+python a2c.py --game zelda --selector pcg-random-3 --resume 90fe9d4c-56e4-11e8-a58c-6c4008b68262 --num-timesteps 40000000
+```
+
 ## How to evaluate
 eval.py will evaluate all models in an experiment folder.
 
@@ -89,6 +93,11 @@ python eval.py --game aliens --experiment-name zelda-lvl-0 --selector pcg-random
 Simply run the following to produce plots for all experiments in .results/
 ```
 python plot.py
+```
+
+## List experiments
+```
+python list.py
 ```
   
 ## Transfer Experiments between Servers
