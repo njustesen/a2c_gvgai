@@ -99,6 +99,7 @@ game_sizes = {
     "aliens": [30, 11],
     "zelda": [13, 9],
     "boulderdash": [26, 13]
+    "frogs": [28, 11]
 }
 
 
