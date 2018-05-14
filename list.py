@@ -21,10 +21,10 @@ def main():
         # Experiment name
         exp_name = exp_folder.split('/')[-2]
         print(exp_name)
-        steps = 0
 
         path = os.path.join(exp_folder, 'models/*/')
         for folder in glob.iglob(path):
+            steps = 0
             exp_id = folder.split('/')[-2]
 
             for model_meta_name in glob.iglob(path + '/*.meta'):
