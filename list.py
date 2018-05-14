@@ -27,8 +27,9 @@ def main():
             steps = 0
             exp_id = folder.split('/')[-2]
 
-            for model_meta_name in glob.iglob(path + '/*.meta'):
+            for model_meta_name in glob.iglob(folder + '/*.meta'):
                 s = int(model_meta_name.split('.meta')[0].split('/')[-1].split("-")[1])
+                print(model_meta_name)
                 if s >= steps:
                     steps = s
 
