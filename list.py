@@ -21,13 +21,13 @@ def main():
         # Experiment name
         exp_name = exp_folder.split('/')[-2]
         print(exp_name)
-        steps = 0
 
         path = os.path.join(exp_folder, 'models/*/')
         for folder in glob.iglob(path):
+            steps = 0
             exp_id = folder.split('/')[-2]
 
-            for model_meta_name in glob.iglob(path + '/*.meta'):
+            for model_meta_name in glob.iglob(folder + '/*.meta'):
                 s = int(model_meta_name.split('.meta')[0].split('/')[-1].split("-")[1])
                 if s >= steps:
                     steps = s

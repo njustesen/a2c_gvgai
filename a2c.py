@@ -18,7 +18,7 @@ from baselines.common import set_global_seeds
 from baselines.ppo2.policies import CnnPolicy, LstmPolicy, LnLstmPolicy
 
 
-def learn(policy, env, experiment_name, experiment_id, seed, nsteps=5, total_timesteps=int(80e6), vf_coef=0.5, ent_coef=0.01, max_grad_norm=0.5, lr=7e-4, lrschedule='linear', epsilon=1e-5, alpha=0.99, gamma=0.99, save_interval=25000, frame_skip=False, level_selector=None):
+def learn(policy, env, experiment_name, experiment_id, seed, nsteps=5, total_timesteps=int(80e6), vf_coef=0.5, ent_coef=0.01, max_grad_norm=0.5, lr=7e-4, lrschedule='linear', epsilon=1e-5, alpha=0.99, gamma=0.99, save_interval=25000, frame_skip=False, level_selector=None, render=False):
     tf.reset_default_graph()
     set_global_seeds(seed)
 
@@ -73,7 +73,7 @@ def learn(policy, env, experiment_name, experiment_id, seed, nsteps=5, total_tim
             return
 
     # Create parallel runner
-    runner = Runner(env, model, nsteps=nsteps, gamma=gamma)
+    runner = Runner(env, model, nsteps=nsteps, gamma=gamma, render=render)
 
     # Training loop
     nbatch = nenvs*nsteps
@@ -154,7 +154,7 @@ def main():
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
     parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=12)
     parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(20e6))
-    parser.add_argument('--game', help='Game name (default=zelda)', default='frogs')
+    parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
@@ -162,6 +162,8 @@ def main():
     parser.add_argument('--repetitions', help='Number of repetitions to run sequentially (default=1)', type=int, default=1)
     parser.add_argument('--selector', help='Level selector to use in training - will ignore the level argument if set (default: None)',
                         choices=[None] + LevelSelector.available, default=None)
+    parser.add_argument('--render', action='store_true', default=False,
+                        help='Render screen (default: False)')
     args = parser.parse_args()
 
     # Gym environment name
@@ -217,7 +219,8 @@ def main():
               lrschedule=args.lrschedule,
               frame_skip=False,
               save_interval=args.save_interval,
-              level_selector=level_selector)
+              level_selector=level_selector,
+              render=args.render)
 
         env.close()
 

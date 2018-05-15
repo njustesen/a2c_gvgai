@@ -52,7 +52,7 @@ class LevelSelector(object):
     def get_selector(selector_name, game, path, fixed=False):
 
         # Register classes for sharing across procs
-        for c in [RandomSelector, RandomWithDifSelector, RandomPCGSelector, RandomWithDifPCGSelector, ProgressivePCGSelector]:
+        for c in [RandomSelector, RandomWithDifSelector, RandomPCGSelector, RandomWithDifPCGSelector, ProgressivePCGSelector, SequentialSelector]:
             BaseManager.register(c.__name__, c)
         manager = BaseManager()
         manager.start()
@@ -93,6 +93,9 @@ class LevelSelector(object):
             self.dir += "/"
         self.game = game.lower()
 
+    def get_game(self):
+        return self.game
+
     def get_level(self):
         '''
         :return: the id and path of the next level to be evaluated.
@@ -113,21 +116,25 @@ game_sizes = {
     "aliens": [30, 11],
     "zelda": [13, 9],
     "boulderdash": [26, 13],
-    "frogs": [28, 10]
+    "frogs": [28, 11]
 }
 
 
 class SequentialSelector(LevelSelector):
 
-    def __init__(self, dir, game, lvl_ids):
+    def __init__(self, dir, game, difficulty):
         super().__init__(dir, game)
-        self.lvl_ids = lvl_ids
+        self.difficulty = difficulty
+        path = os.path.dirname(os.path.realpath(__file__)) + "/data/test-levels/" + game + "/" + str(int(difficulty * 10)) + "/"
+        self.levels = [filename for filename in glob.iglob(path + '*')]
         self.idx = 0
 
     def get_level(self):
-        lvl_id = self.lvl_ids[self.idx]
-        self.idx = min(self.idx + 1, len(self.lvl_ids) - 1)
-        return lvl_id
+        level = self.levels[self.idx]
+        self.idx = self.idx + 1
+        if self.idx >= len(self.levels):
+            self.idx = 0
+        return level
 
     def report(self, level_id, win):
         pass
@@ -158,7 +165,7 @@ class RandomWithDifSelector(LevelSelector):
     def __init__(self, dir, game, difficulty):
         super().__init__(dir, game)
         self.difficulty = difficulty
-        path = os.path.dirname(os.path.realpath(__file__)) + "/data/test-levels/zelda/" + str(int(difficulty * 10)) + "/"
+        path = os.path.dirname(os.path.realpath(__file__)) + "/data/test-levels/" + game + "/" + str(int(difficulty * 10)) + "/"
         self.levels = [filename for filename in glob.iglob(path + '*')]
 
     def get_level(self):
@@ -239,7 +246,13 @@ class ProgressivePCGSelector(LevelSelector):
     def get_info(self):
         return str(self.difficulty)
 
-#sel = RandomPCGSelector("./", "zelda")
-#level = sel.get_level()
+'''
+for i in range(11):
+    for x in range(10):
+        make_path("./data/test-levels/boulderdash/" + str(i) + "/")
+        sel = ProgressivePCGSelector("./data/test-levels/boulderdash/" + str(i) + "/", "boulderdash", upper_limit=False)
+        sel.difficulty = i*0.1
+        level = sel.get_level()
+'''
 #print("Playing on level " + level)
 #sel.report(level, False)

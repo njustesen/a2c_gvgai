@@ -41,6 +41,8 @@ def test_on(game, level, selector, experiment, policy, num_envs=1, seed=0, runs=
     else:
         test_name += "-lvl-" + str(level)
 
+    print("Test: " + test_name)
+
     experiments = []
     if experiment is not None:
         experiments.append(experiment)
@@ -151,23 +153,16 @@ def main():
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--experiment-name', help='Name of the experiment to evaluate, e.g. zelda-ls-pcg-random (default=None -> all)', default=None)
+    parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
+    parser.add_argument('--selector',
+                        help='Level selector to use in training - will ignore the level argument if set (default: None)',
+                        choices=[None] + LevelSelector.available, default=None)
     parser.add_argument('--render', action='store_true', default=False,
                         help='Render screen (default: False)')
 
     args = parser.parse_args()
 
-    levels = [0, 1, 2, 3, 4]
-    selectors = ['seq-0',
-                 'seq-3',
-                 'seq-5',
-                 'seq-7',
-                 'seq-10']
-
-    for level in levels:
-        test_on(args.game, level, None, experiment=args.experiment_name, policy=args.policy, runs=args.runs, seed=args.seed)
-
-    for selector in selectors:
-        test_on(args.game, 0, selector, experiment=args.experiment_name, policy=args.policy, runs=args.runs, seed=args.seed)
+    test_on(args.game, args.level, args.selector, experiment=args.experiment_name, policy=args.policy, runs=args.runs, seed=args.seed)
 
 
 if __name__ == '__main__':

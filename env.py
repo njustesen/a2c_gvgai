@@ -21,7 +21,10 @@ def worker(remote, parent_remote, env_fn_wrapper, level_selector=None):
             score += reward
             if done:
                 if level_selector is not None:
-                    level_selector.report(level, False if info['winner'] == 'PLAYER_LOSES' else True)
+                    if level_selector.get_game() == "boulderdash":
+                        level_selector.report(level, score >= 20)
+                    else:
+                        level_selector.report(level, False if info['winner'] == 'PLAYER_LOSES' else True)
                     level = level_selector.get_level()
                     env.unwrapped._setLevel(level)
                 ob = env.reset()
