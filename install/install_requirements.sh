@@ -15,10 +15,6 @@ sudo apt-get install openjdk-8-jdk
 sudo pip3 install pillow
 sudo pip3 install opencv-python
 
-#Install Tensorflow
-#sudo pip3 install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.8.0-cp36-cp36m-linux_x86_64.whl
-sudo pip3 install tensorflow_gpu
-
 #Install GVGAI-GYM
 git clone https://github.com/rubenrtorrado/GVGAI_GYM.git
 sudo pip3 install -e ./GVGAI_GYM
@@ -32,4 +28,8 @@ sudo pip3 install -e ./baselines
 #pip3 install -e ./a2c_gvgai
 
 sudo sh ../lib/gvgai_generator/install.sh
-sudo npm update npm -g
+#sudo npm update npm -g
+
+#Install Tensorflow GPU
+#sudo pip3 install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.8.0-cp36-cp36m-linux_x86_64.whl
+sudo pip3 install tensorflow_gpu
