@@ -199,13 +199,13 @@ def plot(path, title, data, smooth=10):
         ax2 = ax1.twinx()
         lns2 = ax2.plot(x, d, linewidth=1, color=color_d, label="Difficulty")
         lns += lns2
-        ax2.set_ylabel('Difficulty')
+        ax2.set_ylabel('Difficulty', color=color_d)
         ax2.set_ylim([0, 1])
         #ax2.axis('off')
         ax2.grid(False)
         #ax1.fill_between(x, dmax, dmin, color=color_d, alpha=0.3)
     plt.title(title, fontsize=fontsize)
-    ax1.set_ylabel('Score')
+    ax1.set_ylabel('Score', color=color)
     ax1.set_xlabel('Steps')
     labs = [l.get_label() for l in lns]
     if ax2 is not None:
@@ -245,7 +245,7 @@ def main():
         datasets.append(data)
         titles.append(title)
     if len(titles) > 0:
-        path = './results/plots/'
+        path = './plots/'
         make_path(path)
         plot_mixed(path, "PCG with Fixed Difficulty", titles, datasets)
         plt.clf()

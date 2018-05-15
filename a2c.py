@@ -154,7 +154,7 @@ def main():
     parser.add_argument('--lrschedule', help='Learning rate schedule', choices=['constant', 'linear'], default='constant')
     parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel (default=12)', type=int, default=12)
     parser.add_argument('--num-timesteps', help='Number of timesteps to train the model', type=int, default=int(20e6))
-    parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
+    parser.add_argument('--game', help='Game name (default=zelda)', default='frogs')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--save-interval', help='Model saving interval in steps', type=int, default=int(1e6))
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
@@ -178,7 +178,7 @@ def main():
 
     for i in range(args.repetitions):
 
-        print("Starting experiment " + str(i+1) + " of " + str(args.repetitions+1))
+        print("Starting experiment " + str(i+1) + " of " + str(args.repetitions))
 
         # Unique id for experiment
         if args.resume is None:

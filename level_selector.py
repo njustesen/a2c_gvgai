@@ -22,6 +22,17 @@ class LevelSelector(object):
                  'random-8',
                  'random-9',
                  'random-10',
+                 'seq-0',
+                 'seq-1',
+                 'seq-2',
+                 'seq-3',
+                 'seq-4',
+                 'seq-5',
+                 'seq-6',
+                 'seq-7',
+                 'seq-8',
+                 'seq-9',
+                 'seq-10',
                  'pcg-random',
                  'pcg-random-0',
                  'pcg-random-1',
@@ -57,6 +68,9 @@ class LevelSelector(object):
             elif selector_name.startswith('random-'):
                 difficulty = float(selector_name.split('random-')[1]) * 0.1
                 selector = manager.RandomWithDifSelector(path, game, difficulty)
+            elif selector_name.startswith('seq-'):
+                difficulty = float(selector_name.split('seq-')[1]) * 0.1
+                selector = manager.SequentialSelector(path, game, difficulty)
             elif selector_name == "pcg-random":
                 selector = manager.RandomPCGSelector(path, game)
             elif selector_name.startswith('pcg-random-'):
@@ -98,8 +112,28 @@ class LevelSelector(object):
 game_sizes = {
     "aliens": [30, 11],
     "zelda": [13, 9],
-    "boulderdash": [26, 13]
+    "boulderdash": [26, 13],
+    "frogs": [28, 10]
 }
+
+
+class SequentialSelector(LevelSelector):
+
+    def __init__(self, dir, game, lvl_ids):
+        super().__init__(dir, game)
+        self.lvl_ids = lvl_ids
+        self.idx = 0
+
+    def get_level(self):
+        lvl_id = self.lvl_ids[self.idx]
+        self.idx = min(self.idx + 1, len(self.lvl_ids) - 1)
+        return lvl_id
+
+    def report(self, level_id, win):
+        pass
+
+    def get_info(self):
+        return ""
 
 
 class RandomSelector(LevelSelector):
