@@ -2,124 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b64f2596-42ae-4568-b028-56f4703c58d5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_74af2268-5871-11e8-b139-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_74e15b18-5871-11e8-b6ef-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_74ee32de-5871-11e8-9325-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_74fb36be-5871-11e8-95e2-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_750ad634-5871-11e8-aed5-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_7517ebd8-5871-11e8-bdd4-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_75263792-5871-11e8-be9c-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_753eeecc-5871-11e8-a12e-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_754e721e-5871-11e8-9d52-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/0/frogs_755eeb14-5871-11e8-aa40-6c4008b68262_dif0.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_756db4fa-5871-11e8-8244-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_757aad2c-5871-11e8-9c2e-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_758817fa-5871-11e8-92a5-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_7594a79a-5871-11e8-8612-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75a18d5c-5871-11e8-aba7-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75aea730-5871-11e8-ae14-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75bb7668-5871-11e8-b027-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75c841fe-5871-11e8-9061-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75d63aa2-5871-11e8-b58f-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75e2ee8c-5871-11e8-9f58-6c4008b68262_dif0.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7a51f706-5871-11e8-a1bb-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7a619346-5871-11e8-937d-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7a6e5c86-5871-11e8-8ff2-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7a7b5134-5871-11e8-8cfd-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7a887b1e-5871-11e8-8068-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7a95097e-5871-11e8-9e28-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7aa14eb4-5871-11e8-ac81-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7ab0c100-5871-11e8-aa3f-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7ac461ec-5871-11e8-87e5-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/10/frogs_7ad2b77e-5871-11e8-b6bc-6c4008b68262_dif1.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_75f000ae-5871-11e8-89b4-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_75fcb8a8-5871-11e8-a99e-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_7609df7e-5871-11e8-b7f4-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_761a0528-5871-11e8-8af3-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_762a1122-5871-11e8-b85c-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_763a6b80-5871-11e8-9106-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_764b0628-5871-11e8-8bcf-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_765bc83e-5871-11e8-a895-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_766cdbd8-5871-11e8-b3c6-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/2/frogs_767a4afa-5871-11e8-80d9-6c4008b68262_dif0.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_7686d664-5871-11e8-9bca-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_7695c8fe-5871-11e8-a677-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_76a3a87a-5871-11e8-a34c-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_76aff8dc-5871-11e8-bd72-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_76bca122-5871-11e8-a740-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_76c90298-5871-11e8-b2b2-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_76d51ad8-5871-11e8-9045-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_76e24742-5871-11e8-9875-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_76ef8d6c-5871-11e8-9ae6-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/3/frogs_76fc7728-5871-11e8-bc8d-6c4008b68262_dif0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_77096048-5871-11e8-a49e-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_77163c14-5871-11e8-9449-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_772355ca-5871-11e8-b474-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_773058a6-5871-11e8-896c-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_773fd7e2-5871-11e8-9e0e-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_774faee8-5871-11e8-995c-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_7761ce18-5871-11e8-a0e2-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_776eb74a-5871-11e8-9eeb-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_777b4668-5871-11e8-9832-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/4/frogs_77888fc6-5871-11e8-bd91-6c4008b68262_dif0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_7795afe4-5871-11e8-be2e-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_77a2670c-5871-11e8-b58e-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_77aedeba-5871-11e8-93af-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_77c00398-5871-11e8-8074-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_77ceeda4-5871-11e8-8b95-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_77ddc858-5871-11e8-a6e4-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_77ec6064-5871-11e8-b413-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_77fccaa8-5871-11e8-8402-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_780c4462-5871-11e8-982c-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/5/frogs_781ac864-5871-11e8-851c-6c4008b68262_dif0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_78275158-5871-11e8-9cd9-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_78343cc2-5871-11e8-9a18-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_7841392c-5871-11e8-89ad-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_78523c18-5871-11e8-b030-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_78617374-5871-11e8-ab85-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_786e52ae-5871-11e8-9c69-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_787c5f1e-5871-11e8-a3ac-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_78898718-5871-11e8-a79e-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_7896d9e2-5871-11e8-8470-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/6/frogs_78a37524-5871-11e8-b9df-6c4008b68262_dif0.6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_78b0823a-5871-11e8-90cf-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_78c0e246-5871-11e8-a3fa-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_78d034ba-5871-11e8-b6d8-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_78deadd8-5871-11e8-ae91-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_78ed3e0c-5871-11e8-ad1a-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_78fd9536-5871-11e8-896c-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_790fe0ba-5871-11e8-bf75-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_79218c28-5871-11e8-957d-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_792e034c-5871-11e8-abd0-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/7/frogs_793a09da-5871-11e8-b74c-6c4008b68262_dif0.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_7946ee1e-5871-11e8-a7ec-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_7953d4f0-5871-11e8-91a6-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_79608cae-5871-11e8-845c-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_796dcb6c-5871-11e8-9d34-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_797a96d0-5871-11e8-b29b-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_7986e49e-5871-11e8-8a16-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_79930b70-5871-11e8-bb28-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_799f584c-5871-11e8-91dc-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_79ac790c-5871-11e8-8ac8-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/8/frogs_79bac6d8-5871-11e8-9367-6c4008b68262_dif0.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_79c75a62-5871-11e8-bce3-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_79d44d74-5871-11e8-8913-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_79e0c180-5871-11e8-b30f-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_79eda486-5871-11e8-bf3a-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_79fb3f38-5871-11e8-a9be-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_7a084cdc-5871-11e8-9e1d-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_7a14e5b4-5871-11e8-93f6-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_7a21188c-5871-11e8-a9ee-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_7a2ea2b0-5871-11e8-aad0-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test-levels/frogs/9/frogs_7a3ee940-5871-11e8-948e-6c4008b68262_dif0.9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a2c.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/install_requirements.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install/install_requirements.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/level_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/level_selector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/gvgai_generator/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/gvgai_generator/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -131,7 +15,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/a2c_gvgai$test2.coverage" NAME="eval Coverage Results" MODIFIED="1525886152297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$level_generator.coverage" NAME="level_generator Coverage Results" MODIFIED="1525484935012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/a2c_gvgai$plot.coverage" NAME="plot Coverage Results" MODIFIED="1526062449365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a2c_gvgai$plot.coverage" NAME="plot Coverage Results" MODIFIED="1526440828932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$model.coverage" NAME="model Coverage Results" MODIFIED="1525496110818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$list.coverage" NAME="list Coverage Results" MODIFIED="1526242786610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$eval.coverage" NAME="eval Coverage Results" MODIFIED="1526420964990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -143,11 +27,8 @@
       <file leaf-file-name="eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -161,38 +42,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="plot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="193" column="66" lean-forward="true" selection-start-line="193" selection-start-column="66" selection-end-line="193" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="env.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="180">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="managers.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="755" selection-start-line="755" selection-end-line="755" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connection.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="203" selection-start-line="203" selection-end-line="203" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="a2c.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="a2c.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/a2c.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="155" column="118" lean-forward="true" selection-start-line="155" selection-start-column="118" selection-end-line="155" selection-end-column="118" />
+            <state relative-caret-position="279">
+              <caret line="165" column="62" selection-start-line="165" selection-start-column="62" selection-end-line="165" selection-end-column="62" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -203,8 +78,8 @@
       <file leaf-file-name="level_selector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/level_selector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="234" selection-start-line="234" selection-end-line="234" />
+            <state relative-caret-position="143">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -223,8 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Vec</find>
-      <find>atari_arg_parser</find>
       <find>make_p</find>
       <find>make_gvgai_env</find>
       <find>lib</find>
@@ -253,6 +126,8 @@
       <find>levels</find>
       <find>level_path</find>
       <find>render</find>
+      <find>font</find>
+      <find>fontsize</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -279,12 +154,12 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/list.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/plot.py" />
         <option value="$PROJECT_DIR$/level_generator.py" />
-        <option value="$PROJECT_DIR$/eval.py" />
         <option value="$PROJECT_DIR$/level_selector.py" />
         <option value="$PROJECT_DIR$/env.py" />
         <option value="$PROJECT_DIR$/a2c.py" />
+        <option value="$PROJECT_DIR$/eval.py" />
+        <option value="$PROJECT_DIR$/plot.py" />
       </list>
     </option>
   </component>
@@ -343,7 +218,32 @@
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="zelda-lvl-0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="zelda-lvl-4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="zelda-lvl-4" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -382,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.a2c">
+  <component name="RunManager" selected="Python.plot">
     <configuration name="a2c" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="a2c_gvgai" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -487,11 +387,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plot" />
         <item itemvalue="Python.a2c" />
         <item itemvalue="Python.level_selector" />
         <item itemvalue="Python.eval" />
         <item itemvalue="Python.list" />
-        <item itemvalue="Python.plot" />
       </list>
     </recent_temporary>
   </component>
@@ -517,15 +417,15 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4384449" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4384449" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16572505" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2096673" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35313174" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35313174" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -574,7 +474,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/plot.py</url>
-          <line>199</line>
+          <line>200</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -666,19 +566,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/test-levels/frogs/0/frogs_750ad634-5871-11e8-aed5-6c4008b68262_dif0.0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75c841fe-5871-11e8-9061-6c4008b68262_dif0.1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75e2ee8c-5871-11e8-9f58-6c4008b68262_dif0.1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/test-levels/frogs/1/frogs_75d63aa2-5871-11e8-b58f-6c4008b68262_dif0.1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -845,9 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/zelda-lvl-0/eval/zelda-lvl-0/scores/zelda-lvl-0.dat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -865,23 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/managers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -896,20 +763,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/level_selector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="234" selection-start-line="234" selection-end-line="234" />
+        <state relative-caret-position="143">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/results/zelda-lvl-0/eval/zelda-lvl-0/scores/zelda-lvl-0.dat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/zelda-lvl-0/eval/zelda-ls-seq-0/scores/zelda-ls-seq-0.dat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/zelda-lvl-0/eval/zelda-ls-seq-10/scores/zelda-ls-seq-10.dat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/a2c.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="155" column="118" lean-forward="true" selection-start-line="155" selection-start-column="118" selection-end-line="155" selection-end-column="118" />
+        <state relative-caret-position="279">
+          <caret line="165" column="62" selection-start-line="165" selection-start-column="62" selection-end-line="165" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="193" column="66" lean-forward="true" selection-start-line="193" selection-start-column="66" selection-end-line="193" selection-end-column="66" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

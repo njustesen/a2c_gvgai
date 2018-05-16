@@ -149,7 +149,7 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--runs', help='Number of runs for each model', type=int, default=2)
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=2)
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=10)
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--experiment-name', help='Name of the experiment to evaluate, e.g. zelda-ls-pcg-random (default=None -> all)', default=None)
@@ -162,7 +162,7 @@ def main():
 
     args = parser.parse_args()
 
-    test_on(args.game, args.level, args.selector, experiment=args.experiment_name, policy=args.policy, runs=args.runs, seed=args.seed)
+    test_on(args.game, args.level, args.selector, experiment=args.experiment_name, policy=args.policy, runs=args.runs, seed=args.seed, num_envs=args.num_envs)
 
 
 if __name__ == '__main__':

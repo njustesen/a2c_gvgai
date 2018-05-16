@@ -8,10 +8,10 @@ import numpy as np
 from time import sleep
 import glob
 import os
+import argparse
 
 from baselines.a2c.utils import make_path
 
-fontsize = 14
 plt.style.use('ggplot')
 
 # brewer2mpl.get_map args: set name  set type  number of colors
@@ -44,7 +44,7 @@ class DataPoint:
         self.d = d
 
 
-def plot_mixed(path, title, titles, datasets, smooth=10):
+def plot_mixed(path, title, titles, datasets, smooth=10, fontsize=14):
     print(title)
 
     colors = ['#1f77b4', '#d62728', '#27d628', '#d627d6']
@@ -125,7 +125,7 @@ def plot_mixed(path, title, titles, datasets, smooth=10):
     fig.savefig(os.path.join(path, title + '.pdf'))
 
 
-def plot(path, title, data, smooth=10):
+def plot(path, title, data, smooth=10, fontsize=14):
     print(title)
 
     color = '#1f77b4'
@@ -191,21 +191,23 @@ def plot(path, title, data, smooth=10):
             step_y.clear()
             step_d.clear()
 
-    lns1 = ax1.plot(x, y, linewidth=1, color=color, label="Mean score")
+    lns1 = ax1.plot(x, y, linewidth=1, color=color, label="Score")
     lns = lns1
     ax1.fill_between(x, ymax, ymin, color=color, alpha=0.3)
     ax2 = None
+    ylabel_color = 'black'
     if len(d) > 0:
         ax2 = ax1.twinx()
         lns2 = ax2.plot(x, d, linewidth=1, color=color_d, label="Difficulty")
         lns += lns2
         ax2.set_ylabel('Difficulty', color=color_d)
+        ylabel_color = color
         ax2.set_ylim([0, 1])
         #ax2.axis('off')
         ax2.grid(False)
         #ax1.fill_between(x, dmax, dmin, color=color_d, alpha=0.3)
     plt.title(title, fontsize=fontsize)
-    ax1.set_ylabel('Score', color=color)
+    ax1.set_ylabel('Score', color=ylabel_color)
     ax1.set_xlabel('Steps')
     labs = [l.get_label() for l in lns]
     if ax2 is not None:
@@ -218,6 +220,10 @@ def plot(path, title, data, smooth=10):
 
 
 def main():
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument('--smooth', help='How many points to smooth', type=int, default=10)
+    parser.add_argument('--font-size', help='Font size on plots', type=int, default=14)
+    args = parser.parse_args()
 
     # Main plot for each experiment
     for experiment_folder in glob.iglob('./results/*/'):
@@ -229,7 +235,7 @@ def main():
             experiment_data = load(experiment_log)
             data.append(experiment_data)
         make_path(path)
-        plot(path, title, data)
+        plot(path, title, data, smooth=args.smooth, fontsize=args.font_size)
         plt.clf()
 
     # Mixed plot for each experiment
@@ -247,7 +253,7 @@ def main():
     if len(titles) > 0:
         path = './plots/'
         make_path(path)
-        plot_mixed(path, "PCG with Fixed Difficulty", titles, datasets)
+        plot_mixed(path, "PCG with Fixed Difficulty", titles, datasets, smooth=args.smooth, fontsize=args.font_size)
         plt.clf()
 
 
