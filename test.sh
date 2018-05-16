@@ -1,20 +1,24 @@
 #!/bin/sh
-NUM_ENVS=10
-RUNS=100
+NUM_ENVS=2
+RUNS=4
+EXPERIMENT_NAME="zelda-lvl-0"
+EXPERIMENT_ID1="88c3e2ba-5883-11e8-bbf6-6c4008b68262"
+EXPERIMENT_ID2="88c3e2ba-5883-11e8-bbf6-6c4008b68262"
+EXPERIMENT_ID3="88c3e2ba-5883-11e8-bbf6-6c4008b68262"
+EXPERIMENT_ID4="88c3e2ba-5883-11e8-bbf6-6c4008b68262"
 
-python eval.py --game zelda --level 0 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --level 1 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --level 2 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --level 3 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --level 4 --num-envs $NUM_ENVS --runs $RUNS
+for (( i=0; i <= 4; ++i ))
+do
+    python eval.py --game zelda --level $i --num-envs $NUM_ENVS --runs $RUNS --experiment-name $EXPERIMENT_NAME --experiment-id $EXPERIMENT_ID1
+    python eval.py --game zelda --level $i --num-envs $NUM_ENVS --runs $RUNS --experiment-name $EXPERIMENT_NAME --experiment-id $EXPERIMENT_ID2
+    python eval.py --game zelda --level $i --num-envs $NUM_ENVS --runs $RUNS --experiment-name $EXPERIMENT_NAME --experiment-id $EXPERIMENT_ID3
+    python eval.py --game zelda --level $i --num-envs $NUM_ENVS --runs $RUNS --experiment-name $EXPERIMENT_NAME --experiment-id $EXPERIMENT_ID4
+done
 
-python eval.py --game zelda --selector seq-0 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-1 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-2 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-3 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-4 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-5 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-6 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-7 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-9 --num-envs $NUM_ENVS --runs $RUNS
-python eval.py --game zelda --selector seq-10 --num-envs $NUM_ENVS --runs $RUNS
+for (( i=0; i <= 10; ++i ))
+do
+    python eval.py --game zelda --selector seq-$i --num-envs $NUM_ENVS --runs $RUNS --experiment-name $EXPERIMENT_NAME --experiment-id $EXPERIMENT_ID1
+    python eval.py --game zelda --selector seq-$i --num-envs $NUM_ENVS --runs $RUNS --experiment-name $EXPERIMENT_NAME --experiment-id $EXPERIMENT_ID2
+    python eval.py --game zelda --selector seq-$i --num-envs $NUM_ENVS --runs $RUNS --experiment-name $EXPERIMENT_NAME --experiment-id $EXPERIMENT_ID3
+    python eval.py --game zelda --selector seq-$i --num-envs $NUM_ENVS --runs $RUNS --experiment-name $EXPERIMENT_NAME --experiment-id $EXPERIMENT_ID4
+done

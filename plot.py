@@ -209,6 +209,7 @@ def plot(path, title, data, smooth=10, fontsize=14):
     plt.title(title, fontsize=fontsize)
     ax1.set_ylabel('Score', color=ylabel_color)
     ax1.set_xlabel('Steps')
+
     labs = [l.get_label() for l in lns]
     if ax2 is not None:
         ax1.legend(lns, labs, loc=0)
