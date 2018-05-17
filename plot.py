@@ -125,7 +125,7 @@ def plot_mixed(path, title, titles, datasets, smooth=10, fontsize=14):
     fig.savefig(os.path.join(path, title + '.pdf'))
 
 
-def plot(path, title, data, smooth=10, fontsize=14):
+def plot(path, title, data, smooth=10, fontsize=14, multiple=False):
     print(title)
 
     color = '#1f77b4'
@@ -138,8 +138,15 @@ def plot(path, title, data, smooth=10, fontsize=14):
 
     # Create datapoints
     points = []
-    for d in data:
-        for point in d:
+    if multiple:
+        for d in data:
+            for point in d:
+                if len(point) < 8:
+                    points.append(DataPoint(point[2], point[3]))
+                else:
+                    points.append(DataPoint(point[2], point[3], d=point[7]))
+    else:
+        for point in data:
             if len(point) < 8:
                 points.append(DataPoint(point[2], point[3]))
             else:
@@ -232,11 +239,16 @@ def main():
         title = title.replace('Pcg', 'PCG').replace('Ls ', '')
         path = os.path.join(experiment_folder, 'plots/')
         data = []
+        i = 0
         for experiment_log in glob.iglob(os.path.join(experiment_folder, 'logs/*.log')):
+            i += 1
             experiment_data = load(experiment_log)
+            experiment_title = title + " " + str(i)
             data.append(experiment_data)
+            plot(path, experiment_title, experiment_data, smooth=args.smooth, fontsize=args.font_size, multiple=False)
+            plt.clf()
         make_path(path)
-        plot(path, title, data, smooth=args.smooth, fontsize=args.font_size)
+        plot(path, title, data, smooth=args.smooth, fontsize=args.font_size, multiple=True)
         plt.clf()
 
     # Mixed plot for each experiment
