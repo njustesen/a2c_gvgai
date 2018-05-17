@@ -1,9 +1,10 @@
 import os
 import numpy as np
 
-folder_path='.'
+folder_path= os.getcwd() + '/results/zelda-ls-pcg-random-10/eval/'
 
 filenames = os.listdir(folder_path)  # get all files' and folders' names in the current directory
+filenames.sort()
 
 result = []
 subfoldertarget='scores'
@@ -12,9 +13,10 @@ std={}
 mean_scores={}
 mean_std={}
 for filename in filenames:  # loop through all the files and folders
-    if os.path.isdir(os.path.join(os.path.abspath("."), filename)):# check whether the current object is a folder or not
+    #print(os.path.isdir(os.path.join(folder_path, filename)))
+    if os.path.isdir(os.path.join(folder_path, filename)): # check whether the current object is a folder or not
         try:
-            subfolder=os.listdir(os.path.join(filename, subfoldertarget))
+            subfolder=os.listdir(os.path.join(folder_path, filename, subfoldertarget))
         except:
             continue
         #os.path.join(filename, subfoldertarget)
@@ -23,7 +25,7 @@ for filename in filenames:  # loop through all the files and folders
         mean_scores = {filename: []}
         mean_std = {filename: []}
         for file in subfolder:
-            text_file = open(os.path.join(filename, subfoldertarget,file), "r")
+            text_file = open(os.path.join(folder_path, filename, subfoldertarget,file), "r")
             lines = text_file.readlines()
 
             for i_line in range(0,len(lines)):
