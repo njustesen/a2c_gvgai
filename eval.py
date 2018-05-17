@@ -102,6 +102,7 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
     print("Runs=" + str(runs))
     print("Mean score=" + str(mean_score))
     print("Std. dev.=" + str(std_score))
+    print("All scores=" + str(scores))
 
     # Save results
     with open(score_file, "a") as myfile:
@@ -112,6 +113,7 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
         line += "Runs=" + str(runs) + "\n"
         line += "Mean score=" + str(mean_score) + "\n"
         line += "Std. dev.=" + str(std_score) + "\n"
+        line += "All scores=" + str(scores) + "\n"
         line += "\n"
         myfile.write(line)
 
@@ -122,11 +124,11 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--policy', help='Policy architecture', choices=['cnn', 'lstm', 'lnlstm'], default='cnn')
     parser.add_argument('--runs', help='Number of runs for each model', type=int, default=100)
-    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=2)
+    parser.add_argument('--num-envs', help='Number of environments/workers to run in parallel', type=int, default=10)
     parser.add_argument('--game', help='Game name (default=zelda)', default='zelda')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
-    parser.add_argument('--experiment-name', help='Name of the experiment to evaluate, e.g. zelda-ls-pcg-random (default=None -> all)', default="zelda-lvl-0")
-    parser.add_argument('--experiment-id', help='Id of the experiment to evaluate', default="88c3e2ba-5883-11e8-bbf6-6c4008b68262")
+    parser.add_argument('--experiment-name', help='Name of the experiment to evaluate, e.g. zelda-ls-pcg-random (default=None -> all)', default=None)
+    parser.add_argument('--experiment-id', help='Id of the experiment to evaluate')
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
     parser.add_argument('--selector',
                         help='Level selector to use in training - will ignore the level argument if set (default: None)',
