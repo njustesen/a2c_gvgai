@@ -2,6 +2,7 @@ import time
 import tensorflow as tf
 import argparse
 import glob
+import random
 
 from model import Model
 from runner import Runner
@@ -18,7 +19,11 @@ from baselines.common import set_global_seeds
 from baselines.ppo2.policies import CnnPolicy, LstmPolicy, LnLstmPolicy
 
 
-def learn(policy, env, experiment_name, experiment_id, seed, nsteps=5, total_timesteps=int(80e6), vf_coef=0.5, ent_coef=0.01, max_grad_norm=0.5, lr=7e-4, lrschedule='linear', epsilon=1e-5, alpha=0.99, gamma=0.99, save_interval=25000, frame_skip=False, level_selector=None, render=False):
+def learn(policy, env, experiment_name, experiment_id, seed=None, nsteps=5, total_timesteps=int(80e6), vf_coef=0.5, ent_coef=0.01, max_grad_norm=0.5, lr=7e-4, lrschedule='linear', epsilon=1e-5, alpha=0.99, gamma=0.99, save_interval=25000, frame_skip=False, level_selector=None, render=False):
+    
+    if seed is None:
+        seed = random.randint(0, 10000000)
+    
     tf.reset_default_graph()
     set_global_seeds(seed)
 
