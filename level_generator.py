@@ -42,9 +42,11 @@ class ParamGenerator(LevelGenerator):
         path = os.path.abspath(file)
         return path
 
+'''
 for d in [0,1,2,3,4,5,6,7,8,9,10]:
     gen = ParamGenerator("./data/test-levels/zelda/{}/".format(d), "zelda", 13, 9)
     for i in range(10):
         level = gen.generate([(d/10.0)], difficulty=True)
 #print(level)
 print("Done")
+'''

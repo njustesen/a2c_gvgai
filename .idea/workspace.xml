@@ -2,119 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b64f2596-42ae-4568-b028-56f4703c58d5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/gvgai_generator/app_v1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6aabf4c-523e-11e8-bde9-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6aadb08-523e-11e8-8722-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6aae15c-523e-11e8-8954-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6ab2040-523e-11e8-be58-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6ab218a-523e-11e8-a285-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6ab2a90-523e-11e8-99a2-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6ab57e8-523e-11e8-97f9-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6ab5a1a-523e-11e8-aaf2-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6ab5c40-523e-11e8-aa90-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/0/zelda_f6abb56e-523e-11e8-9efc-6c4008b68262_dif0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3aeff0-523f-11e8-8eb4-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3af19e-523f-11e8-8bc9-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3af718-523f-11e8-a5c8-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3af748-523f-11e8-ab7c-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3b07e2-523f-11e8-b13d-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3b0e86-523f-11e8-8ae5-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3b0f1c-523f-11e8-8959-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3b490a-523f-11e8-9a26-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3b4b26-523f-11e8-a92b-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/1/zelda_5f3b649e-523f-11e8-bc41-6c4008b68262_dif0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f6589d34-5240-11e8-9e79-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f6589dbe-5240-11e8-bfd9-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f658a0b6-5240-11e8-9260-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f658a2fa-5240-11e8-ba31-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f658ba1a-5240-11e8-81b9-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f658c6a4-5240-11e8-a61f-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f658c818-5240-11e8-9fc8-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f658d838-5240-11e8-8633-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f658d900-5240-11e8-bb15-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/zelda_f658e1ac-5240-11e8-b2ea-6c4008b68262_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf3c546-523f-11e8-a2c7-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf3c828-523f-11e8-8ceb-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf3c940-523f-11e8-82a9-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf3cb34-523f-11e8-a6ad-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf3e95c-523f-11e8-b2a2-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf3eb14-523f-11e8-a527-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf3ed1c-523f-11e8-9d8c-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf424ee-523f-11e8-9b19-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf42c5a-523f-11e8-bcdb-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8bf42c6e-523f-11e8-9724-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/2/zelda_8e2cb1b8-523f-11e8-b801-6c4008b68262_dif0.2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45e657a-523f-11e8-8b02-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45e734c-523f-11e8-85f8-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45e77a4-523f-11e8-9b0f-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45ede1a-523f-11e8-904e-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45eeaf4-523f-11e8-b76e-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45f381a-523f-11e8-8988-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45f4f3a-523f-11e8-b1f3-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45f8d74-523f-11e8-b5ed-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45fa048-523f-11e8-8554-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/3/zelda_b45fa1a6-523f-11e8-b677-6c4008b68262_dif0.3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95f7b92-523f-11e8-acab-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95f7eba-523f-11e8-837d-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95f852e-523f-11e8-b6ea-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95f9a28-523f-11e8-84d7-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95fbb86-523f-11e8-a022-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95fcc8c-523f-11e8-8023-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95fdcc2-523f-11e8-a389-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95fe19a-523f-11e8-96cc-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e95ffd58-523f-11e8-94b0-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/4/zelda_e960080a-523f-11e8-ae09-6c4008b68262_dif0.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de2ee8-5240-11e8-b995-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de2f62-5240-11e8-ba36-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de2f6c-5240-11e8-bcc0-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de3282-5240-11e8-99be-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de4dc6-5240-11e8-a329-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de4f7e-5240-11e8-9063-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de503a-5240-11e8-acf6-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de53ac-5240-11e8-bdcb-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de669e-5240-11e8-915a-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/zelda_18de673e-5240-11e8-8a9c-6c4008b68262_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_41cc712c-5240-11e8-a3d7-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_41cc723a-5240-11e8-84ca-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_41cc730c-5240-11e8-b0fe-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_41cc74cc-5240-11e8-91f3-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_41cc9b28-5240-11e8-b2b6-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_41cc9c4c-5240-11e8-bbeb-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_4b476658-5240-11e8-91af-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_4ba8d154-5240-11e8-beb7-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_4c1f7ffa-5240-11e8-9457-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/6/zelda_4c70ac38-5240-11e8-880d-6c4008b68262_dif0.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_740f1b76-5240-11e8-a7da-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_740f1d10-5240-11e8-82a8-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_740f339a-5240-11e8-ac61-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_740f33c2-5240-11e8-a0d2-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_740f35f4-5240-11e8-9f28-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_740f38ae-5240-11e8-9ac0-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_740f4af6-5240-11e8-8a95-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_740f4b82-5240-11e8-88fd-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_78d8ed4c-5240-11e8-b035-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/7/zelda_7e745e50-5240-11e8-8c2e-6c4008b68262_dif0.7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b51a4-5240-11e8-a950-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b524c-5240-11e8-9a74-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b53fa-5240-11e8-a2eb-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b5910-5240-11e8-95ae-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b6d10-5240-11e8-8802-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b6d38-5240-11e8-824b-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b6e64-5240-11e8-bd39-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b70e4-5240-11e8-952a-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b8566-5240-11e8-b36f-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/8/zelda_a64b85e8-5240-11e8-ae19-6c4008b68262_dif0.8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3b02c2-5240-11e8-8811-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3b28c6-5240-11e8-bceb-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3b4798-5240-11e8-86a7-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3c5a8c-5240-11e8-97b7-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3c7b7a-5240-11e8-8af4-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3c9a62-5240-11e8-b8e7-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3cba68-5240-11e8-80da-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3cda52-5240-11e8-a9ae-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3ce5ec-5240-11e8-8e85-6c4008b68262_dif0.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/9/zelda_ce3ce7a4-5240-11e8-aaa8-6c4008b68262_dif0.9.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/level_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/level_generator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -164,11 +51,29 @@
       <file leaf-file-name="level_generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/level_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="96" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
+            <state relative-caret-position="432">
+              <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app_v2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/gvgai_generator/app_v2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="1633" column="21" selection-start-line="1633" selection-start-column="21" selection-end-line="1633" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -266,6 +171,7 @@
         <option value="$PROJECT_DIR$/investigate.py" />
         <option value="$PROJECT_DIR$/plot.py" />
         <option value="$PROJECT_DIR$/eval.py" />
+        <option value="$PROJECT_DIR$/lib/gvgai_generator/app_v2.js" />
         <option value="$PROJECT_DIR$/level_generator.py" />
       </list>
     </option>
@@ -324,19 +230,6 @@
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="zelda" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -362,11 +255,12 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/test-levels/frogs/1" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/test-levels/frogs/1" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -517,12 +411,12 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40358272" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40358272" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14345238" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14345238" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32982087" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32982087" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -571,7 +465,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/level_generator.py</url>
-          <line>46</line>
+          <line>47</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
@@ -596,7 +490,7 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string />
+        <expression-string>&quot;node &quot; + self.script + &quot; &quot; + self.game + &quot; &quot; + file + &quot; &quot; + param_str</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -611,7 +505,7 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>os.path.join(exp_folder, 'models/*/')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -626,7 +520,7 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>glob.iglob(model_folder + '/*.meta')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -643,11 +537,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/10/boulderdash_6492b776-5875-11e8-9974-6c4008b68262_dif1.0.txt" />
-    <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/10/boulderdash_6469a99e-5875-11e8-bc70-6c4008b68262_dif1.0.txt" />
-    <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/10/boulderdash_64dbd10c-5875-11e8-ae69-6c4008b68262_dif1.0.txt" />
-    <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/10/boulderdash_64c8273a-5875-11e8-8774-6c4008b68262_dif1.0.txt" />
-    <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/0/boulderdash_5dcd3d12-5875-11e8-9e9f-6c4008b68262_dif0.0.txt" />
     <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/0/boulderdash_5d91d9c0-5875-11e8-b487-6c4008b68262_dif0.0.txt" />
     <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/0/boulderdash_5dafd274-5875-11e8-b378-6c4008b68262_dif0.0.txt" />
     <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/1/boulderdash_5e83f854-5875-11e8-bafc-6c4008b68262_dif0.1.txt" />
@@ -696,13 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -777,10 +659,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gvgai_generator/app_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="1633" column="21" selection-start-line="1633" selection-start-column="21" selection-end-line="1633" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/0/zelda_80afd592-aad7-11e8-9c2c-06006c6a1901_dif0.0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/2/zelda_81db8f42-aad7-11e8-97f1-06006c6a1901_dif0.2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/7/zelda_84e66f06-aad7-11e8-835d-06006c6a1901_dif0.7.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/10/zelda_86befa30-aad7-11e8-8d28-06006c6a1901_dif1.0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/level_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="96" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
+        <state relative-caret-position="432">
+          <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
