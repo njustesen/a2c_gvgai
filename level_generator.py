@@ -26,7 +26,7 @@ class ParamGenerator(LevelGenerator):
         super().__init__(dir, game)
         self.width = width
         self.height = height
-        self.script = os.path.dirname(os.path.realpath(__file__)) + '/lib/gvgai_generator/app.js'
+        self.script = os.path.dirname(os.path.realpath(__file__)) + '/lib/gvgai_generator/app_v2.js'
 
     def generate(self, params=[], difficulty=None):
         name = self.game + "_" + str(uuid.uuid1())
@@ -42,7 +42,9 @@ class ParamGenerator(LevelGenerator):
         path = os.path.abspath(file)
         return path
 
-
-#gen = ParamGenerator("./levels/", "zelda", width=13, height=9)
-#level = gen.generate()
+for d in [0,1,2,3,4,5,6,7,8,9,10]:
+    gen = ParamGenerator("./data/test-levels/zelda/{}/".format(d), "zelda", 13, 9)
+    for i in range(10):
+        level = gen.generate([(d/10.0)], difficulty=True)
 #print(level)
+print("Done")
