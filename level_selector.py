@@ -129,8 +129,8 @@ game_sizes = {
     "aliens": [30, 11],
     "zelda": [13, 9],
     "boulderdash": [26, 13],
-    "solarfox": [10, 11],
-    "frogs": [28, 11]
+    "frogs": [28, 11],
+    "solarfox": [10,11]
 }
 
 
@@ -311,14 +311,3 @@ class ProgressivePCGSelector(LevelSelector):
 
     def get_info(self):
         return str(self.difficulty)
-
-'''
-for i in range(11):
-    for x in range(10):
-        make_path("./data/test-levels/boulderdash/" + str(i) + "/")
-        sel = ProgressivePCGSelector("./data/test-levels/boulderdash/" + str(i) + "/", "boulderdash", upper_limit=False)
-        sel.difficulty = i*0.1
-        level = sel.get_level()
-'''
-#print("Playing on level " + level)
-#sel.report(level, False)
