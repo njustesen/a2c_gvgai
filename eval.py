@@ -27,7 +27,7 @@ def eval(model, env, nsteps=5, runs=100, render=False, level_selector=None):
     return scores
 
 
-def test_on(game, level, selector, experiment_name, experiment_id, policy, num_envs=1, seed=0, runs=100, render=False):
+def test_on(game, level, selector, experiment_name, experiment_id, policy, num_envs=1, seed=0, runs=100, render=False, save_results=True):
 
     # Environment name
     env_id = "gvgai-" + game + "-lvl" + str(level) + "-v0"
@@ -55,7 +55,7 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
         myfile.write('')
 
     # Level selector
-    level_selector = LevelSelector.get_selector(selector, game, level_path)
+    level_selector = LevelSelector.get_selector(selector, game, level_path, max=runs)
 
     env = make_gvgai_env(env_id, num_envs, seed, level_selector=level_selector)
 
@@ -104,18 +104,19 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
     print("Std. dev.=" + str(std_score))
     print("All scores=" + str(scores))
 
-    # Save results
-    with open(score_file, "a") as myfile:
-        line = "Testing on=" + test_name + "\n"
-        line += "Trained on=" + experiment_name + "\n"
-        line += "Id=" + experiment_id + "\n"
-        line += "Steps trained=" + str(steps) + "\n"
-        line += "Runs=" + str(runs) + "\n"
-        line += "Mean score=" + str(mean_score) + "\n"
-        line += "Std. dev.=" + str(std_score) + "\n"
-        line += "All scores=" + str(scores) + "\n"
-        line += "\n"
-        myfile.write(line)
+    if save_results:
+        # Save results
+        with open(score_file, "a") as myfile:
+            line = "Testing on=" + test_name + "\n"
+            line += "Trained on=" + experiment_name + "\n"
+            line += "Id=" + experiment_id + "\n"
+            line += "Steps trained=" + str(steps) + "\n"
+            line += "Runs=" + str(runs) + "\n"
+            line += "Mean score=" + str(mean_score) + "\n"
+            line += "Std. dev.=" + str(std_score) + "\n"
+            line += "All scores=" + str(scores) + "\n"
+            line += "\n"
+            myfile.write(line)
 
     env.close()
 
@@ -135,10 +136,22 @@ def main():
                         choices=[None] + LevelSelector.available, default=None)
     parser.add_argument('--render', action='store_true',
                         help='Render screen (default: False)')
+    parser.add_argument('--no-save', action='store_true',
+                        help='Disable result saving (default: False)')
 
     args = parser.parse_args()
 
-    test_on(args.game, args.level, args.selector, experiment_name=args.experiment_name, experiment_id=args.experiment_id, policy=args.policy, runs=args.runs, seed=args.seed, num_envs=args.num_envs, render=args.render)
+    test_on(args.game,
+            args.level,
+            args.selector,
+            experiment_name=args.experiment_name,
+            experiment_id=args.experiment_id,
+            policy=args.policy,
+            runs=args.runs,
+            seed=args.seed,
+            num_envs=args.num_envs,
+            render=args.render,
+            save_results=not args.no_save)
 
 
 if __name__ == '__main__':

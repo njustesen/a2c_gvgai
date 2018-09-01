@@ -13,6 +13,9 @@ std={}
 mean_scores={}
 mean_std={}
 for filename in filenames:  # loop through all the files and folders
+    if filename.startswith("."):
+        continue
+    print(filename)
     #print(os.path.isdir(os.path.join(folder_path, filename)))
     if os.path.isdir(os.path.join(folder_path, filename)): # check whether the current object is a folder or not
         try:
@@ -25,6 +28,9 @@ for filename in filenames:  # loop through all the files and folders
         mean_scores = {filename: []}
         mean_std = {filename: []}
         for file in subfolder:
+            if file.startswith("."):
+                continue
+            print(file)
             text_file = open(os.path.join(folder_path, filename, subfoldertarget,file), "r")
             lines = text_file.readlines()
 
