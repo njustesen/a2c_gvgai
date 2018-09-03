@@ -1,0 +1,11 @@
+w......2.w
+w++++++++w
+w+pp++bb+w
+w++++p+b+w
+w+pp+b+++w
+w+++A+b++w
+w+pp+b+++w
+w++++p+b+w
+w+pp++bb+w
+w++++++++w
+w..1.....w
