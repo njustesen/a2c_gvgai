@@ -34,8 +34,8 @@
       <file leaf-file-name="eval.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="163" column="40" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="40" />
+            <state relative-caret-position="241">
+              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -228,11 +228,6 @@
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
@@ -489,11 +484,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2403487" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2403487" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30150068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30150068" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -814,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="163" column="40" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="40" />
+        <state relative-caret-position="241">
+          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

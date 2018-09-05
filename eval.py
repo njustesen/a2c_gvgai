@@ -66,7 +66,7 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
 
     # Find number of steps for last model
     steps = 0
-    if model_steps > 0:
+    if model_steps < 0:
         for model_meta_name in glob.iglob(model_folder + '*.meta'):
             s = int(model_meta_name.split('.meta')[0].split('/')[-1].split("-")[1])
             if s > steps:
