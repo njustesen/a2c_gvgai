@@ -3,127 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b64f2596-42ae-4568-b028-56f4703c58d5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_33cccd36-acc4-11e8-b7b4-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_33dd9a3a-acc4-11e8-93e9-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_33ebf378-acc4-11e8-acf8-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_33faaf94-acc4-11e8-bc97-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_3409651e-acc4-11e8-8915-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_3419ab62-acc4-11e8-a2e7-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_3429dcf6-acc4-11e8-95dc-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_343ad880-acc4-11e8-8de2-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_344ba48a-acc4-11e8-92f2-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_345e98f6-acc4-11e8-a51c-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_347344a4-acc4-11e8-aaec-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_34821524-acc4-11e8-8a02-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_34928382-acc4-11e8-b095-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_34a3ee58-acc4-11e8-bff5-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_34b3fec2-acc4-11e8-b522-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_34c34ec2-acc4-11e8-9b34-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_34d28bd0-acc4-11e8-bebf-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_34e1881a-acc4-11e8-9960-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_34f26d4c-acc4-11e8-9567-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_350110e2-acc4-11e8-8159-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_351054f6-acc4-11e8-81bf-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_3522c9ba-acc4-11e8-beca-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_35331e3a-acc4-11e8-b63b-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_3543eff0-acc4-11e8-a5f1-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_35570590-acc4-11e8-9794-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_3566f87e-acc4-11e8-bf51-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_3575f248-acc4-11e8-82f4-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_35846c62-acc4-11e8-a9b1-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_359470ba-acc4-11e8-9b7f-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_35a538a8-acc4-11e8-b55e-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0e73bc66-acc4-11e8-b357-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0e7e5e3a-acc4-11e8-805c-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0e891f7a-acc4-11e8-b7cb-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0e9ba5be-acc4-11e8-90f0-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0eafacba-acc4-11e8-ae30-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0ebe0458-acc4-11e8-9f48-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0ece8830-acc4-11e8-b709-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0ee0b4c6-acc4-11e8-95f1-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0eefe3b8-acc4-11e8-8d6e-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0efe083a-acc4-11e8-8104-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f0a99e2-acc4-11e8-b4d0-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f167974-acc4-11e8-84c0-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f231206-acc4-11e8-9a14-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f31f4cc-acc4-11e8-8346-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f3c5b26-acc4-11e8-b1fa-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f46dc36-acc4-11e8-a1e0-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f51f51c-acc4-11e8-bc4d-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f5cf5fa-acc4-11e8-bbe4-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f67a2fe-acc4-11e8-a49b-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f72fc9e-acc4-11e8-9a2e-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f816d4c-acc4-11e8-876e-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f8c7e9e-acc4-11e8-a0a3-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0f974900-acc4-11e8-bec8-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0fa2f7e6-acc4-11e8-adf6-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0fad9c34-acc4-11e8-b865-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0fbb0354-acc4-11e8-8cbc-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0fcaac6e-acc4-11e8-8154-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0fd82b46-acc4-11e8-b8bb-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0fe61314-acc4-11e8-bbad-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/10/frogs_0ff22898-acc4-11e8-b649-06006c6a1901_dif1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_31fcc8da-acc4-11e8-adf1-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_3217d1fa-acc4-11e8-9366-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32274ea2-acc4-11e8-a9a7-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32378c90-acc4-11e8-8116-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32480d9a-acc4-11e8-8989-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_325bc164-acc4-11e8-8310-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_326beb5c-acc4-11e8-ab62-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_327a4398-acc4-11e8-b3d5-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_328b12e8-acc4-11e8-8d94-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_329805ac-acc4-11e8-9406-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32a92666-acc4-11e8-a96c-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32b6be5c-acc4-11e8-a816-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32c525fa-acc4-11e8-a91b-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32d3411c-acc4-11e8-b7ad-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32e263d8-acc4-11e8-bd5d-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_32f2e206-acc4-11e8-81dd-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_33035106-acc4-11e8-9107-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_3311ff7e-acc4-11e8-8d82-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_3321abe2-acc4-11e8-844b-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_3331ab8a-acc4-11e8-b880-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_334167a8-acc4-11e8-85d9-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_334f1a30-acc4-11e8-a205-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_335d735a-acc4-11e8-bda7-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_336adc1e-acc4-11e8-ad52-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_33794954-acc4-11e8-af3b-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_3388d662-acc4-11e8-af9c-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_3395fbc6-acc4-11e8-a3a4-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_33a3396c-acc4-11e8-9fa9-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_33b065b0-acc4-11e8-b333-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/boulderdash_33bef68c-acc4-11e8-af9f-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0c90bb7e-acc4-11e8-93fb-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d197630-acc4-11e8-bbfa-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d25d600-acc4-11e8-9637-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d309e78-acc4-11e8-96a0-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d3b8892-acc4-11e8-a91d-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d475848-acc4-11e8-a551-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d53b674-acc4-11e8-a2f0-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d634422-acc4-11e8-9741-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d6e6578-acc4-11e8-bcbd-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d7878d8-acc4-11e8-b923-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d8304d8-acc4-11e8-9f87-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d8dfd48-acc4-11e8-85de-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0d98aef0-acc4-11e8-af3b-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0da3b37a-acc4-11e8-a174-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0db1c67e-acc4-11e8-8b4b-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0dbc6c82-acc4-11e8-adbf-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0dc72fb4-acc4-11e8-87e7-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0dd1d1c6-acc4-11e8-809b-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0dde1576-acc4-11e8-9104-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0de94914-acc4-11e8-9138-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0dfc4f3a-acc4-11e8-86d5-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e08c762-acc4-11e8-8062-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e151314-acc4-11e8-942a-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e20df8c-acc4-11e8-9b10-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e2d1a40-acc4-11e8-a81b-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e3939e2-acc4-11e8-9ced-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e478d58-acc4-11e8-8e16-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e52c97a-acc4-11e8-9d6a-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e5dc106-acc4-11e8-922e-06006c6a1901_dif0.5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test-levels/zelda/5/frogs_0e6913ec-acc4-11e8-9fff-06006c6a1901_dif0.5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/calulate_mean_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/calulate_mean_std.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test-levels/frogs/human/frogs_lvl4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/test-levels/frogs/human/frogs_lvl4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -137,101 +21,75 @@
     <SUITE FILE_PATH="coverage/a2c_gvgai$level_generator.coverage" NAME="level_generator Coverage Results" MODIFIED="1535811592402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$investigate.coverage" NAME="investigate Coverage Results" MODIFIED="1526522950886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$plot.coverage" NAME="plot Coverage Results" MODIFIED="1526523695013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a2c_gvgai$plot_paper.coverage" NAME="plot_paper Coverage Results" MODIFIED="1536151958396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$model.coverage" NAME="model Coverage Results" MODIFIED="1525496110818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$list.coverage" NAME="list Coverage Results" MODIFIED="1526242786610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$a2c.coverage" NAME="a2c Coverage Results" MODIFIED="1526423738828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/a2c_gvgai$eval.coverage" NAME="eval Coverage Results" MODIFIED="1526575967762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a2c_gvgai$eval.coverage" NAME="eval Coverage Results" MODIFIED="1536148331883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$auto_generate.coverage" NAME="auto_generate Coverage Results" MODIFIED="1535982957203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a2c_gvgai$level_selector.coverage" NAME="level_selector Coverage Results" MODIFIED="1526423509597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="zelda_15183f5a-af81-11e8-965f-06006c6a1901_dif0.75.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/7.5/zelda_15183f5a-af81-11e8-965f-06006c6a1901_dif0.75.txt">
+    <leaf>
+      <file leaf-file-name="eval.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-end-line="9" />
+            <state relative-caret-position="420">
+              <caret line="163" column="40" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zelda_0a1c8636-a79f-11e8-bbcf-06006c6a1901_dif1.0.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/10/zelda_0a1c8636-a79f-11e8-bbcf-06006c6a1901_dif1.0.txt">
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-end-line="9" />
+            <state relative-caret-position="520">
+              <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zelda_b5e83e3a-acc3-11e8-91ef-06006c6a1901_dif0.5.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/5/zelda_b5e83e3a-acc3-11e8-91ef-06006c6a1901_dif0.5.txt">
+      <file leaf-file-name="a2c.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/a2c.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-end-line="9" />
+            <state relative-caret-position="2040">
+              <caret line="154" selection-start-line="154" selection-end-line="154" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zelda_150c6afe-af81-11e8-bab5-06006c6a1901_dif0.25.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/2.5/zelda_150c6afe-af81-11e8-bab5-06006c6a1901_dif0.25.txt">
+      <file leaf-file-name="level_selector.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/level_selector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-end-line="9" />
+            <state relative-caret-position="259">
+              <caret line="288" column="39" selection-start-line="288" selection-start-column="39" selection-end-line="288" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zelda_14ff19ba-af81-11e8-bca6-06006c6a1901_dif0.0.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/0/zelda_14ff19ba-af81-11e8-bca6-06006c6a1901_dif0.0.txt">
+      <file leaf-file-name="test.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="390">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solarfox_15761350-af81-11e8-976d-06006c6a1901_dif0.0.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/0/solarfox_15761350-af81-11e8-976d-06006c6a1901_dif0.0.txt">
+      <file leaf-file-name="plot_paper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_paper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="10" lean-forward="true" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solarfox_158b7aa6-af81-11e8-a73a-06006c6a1901_dif0.75.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/7.5/solarfox_158b7aa6-af81-11e8-a73a-06006c6a1901_dif0.75.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solarfox_54a6b98c-acd0-11e8-b710-06006c6a1901_dif1.0.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/10/solarfox_54a6b98c-acd0-11e8-b710-06006c6a1901_dif1.0.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solarfox_1580faa4-af81-11e8-95a7-06006c6a1901_dif0.25.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/2.5/solarfox_1580faa4-af81-11e8-95a7-06006c6a1901_dif0.25.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solarfox_5b73aea2-acd0-11e8-918e-06006c6a1901_dif0.5.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/5/solarfox_5b73aea2-acd0-11e8-918e-06006c6a1901_dif0.5.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="527">
+              <caret line="235" column="37" selection-start-line="235" selection-start-column="37" selection-end-line="235" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,8 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ParamGenerator</find>
-      <find>game_sizes</find>
       <find>report</find>
       <find>Process</find>
       <find>console.log</find>
@@ -263,7 +119,6 @@
       <find>get_info</find>
       <find>experiment_name =</find>
       <find>glob</find>
-      <find>ProgressivePCGSelector</find>
       <find>episodes</find>
       <find>experiment_name</find>
       <find>plot</find>
@@ -277,6 +132,9 @@
       <find>fox</find>
       <find>solarfox</find>
       <find>solarfox&quot;</find>
+      <find>SequentialHumanLevelSelector</find>
+      <find>ProgressivePCGSelector</find>
+      <find>save_path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -305,14 +163,12 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/a2c.py" />
         <option value="$PROJECT_DIR$/test_azure_exp.sh" />
-        <option value="$PROJECT_DIR$/test.sh" />
         <option value="$PROJECT_DIR$/test_azure.sh" />
         <option value="$PROJECT_DIR$/investigate.py" />
         <option value="$PROJECT_DIR$/plot.py" />
         <option value="$PROJECT_DIR$/lib/gvgai_generator/app_v2.js" />
         <option value="$PROJECT_DIR$/eval_split.py" />
         <option value="$PROJECT_DIR$/../deep-neuroevolution/es_distributed/es.py" />
-        <option value="$PROJECT_DIR$/eval.py" />
         <option value="$PROJECT_DIR$/env.py" />
         <option value="$PROJECT_DIR$/calulate_mean_std.py" />
         <option value="$PROJECT_DIR$/lib/gvgai_generator/app_v3.js" />
@@ -320,6 +176,9 @@
         <option value="$PROJECT_DIR$/level_selector.py" />
         <option value="$PROJECT_DIR$/auto_generate.py" />
         <option value="$PROJECT_DIR$/data/test-levels/zelda/7.5/zelda_15183f5a-af81-11e8-965f-06006c6a1901_dif0.75.txt" />
+        <option value="$PROJECT_DIR$/plot_paper.py" />
+        <option value="$PROJECT_DIR$/test.sh" />
+        <option value="$PROJECT_DIR$/eval.py" />
       </list>
     </option>
   </component>
@@ -336,8 +195,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="173" />
-    <option name="width" value="1440" />
+    <option name="x" value="68" />
+    <option name="y" value="23" />
+    <option name="width" value="1466" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -372,89 +232,90 @@
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="boulderdash" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="boulderdash-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="boulderdash" type="462c0819:PsiDirectoryNode" />
-              <item name="0" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="boulderdash-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="frogs" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="boulderdash-ls-pcg-random-10" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="solarfox" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="frogs-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="solarfox" type="462c0819:PsiDirectoryNode" />
-              <item name="0" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="frogs-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="solarfox" type="462c0819:PsiDirectoryNode" />
-              <item name="2.5" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="frogs-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="zelda" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="frogs-ls-pcg-random-10" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="zelda" type="462c0819:PsiDirectoryNode" />
-              <item name="0" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="frogs-ls-pcg-random-10" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="zelda" type="462c0819:PsiDirectoryNode" />
-              <item name="2.5" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="solarfox-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
               <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="test-levels" type="462c0819:PsiDirectoryNode" />
-              <item name="zelda" type="462c0819:PsiDirectoryNode" />
-              <item name="7.5" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="solarfox-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="zelda-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="a2c_gvgai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="a2c_gvgai" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="zelda-ls-pcg-progressive-fixed" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -495,10 +356,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.auto_generate">
+  <component name="RunManager" selected="Python.plot_paper">
     <configuration name="auto_generate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="a2c_gvgai" />
-      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_OPTIONS" value="--game frogs --selector seq-human-0 --num-envs 1 --runs 1 --experiment-name frogs-ls-pcg-random-10 --experiment-id 8432c0b4-57e7-11e8-bb96-fa163e7e39b4" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
@@ -522,33 +383,14 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3.6" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eval.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="investigate" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="a2c_gvgai" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/investigate.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="--game frogs --selector seq-human-0 --num-envs 1 --runs 1 --experiment-name frogs-ls-pcg-random-10 --experiment-id 8432c0b4-57e7-11e8-bb96-fa163e7e39b4" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -591,20 +433,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="plot_paper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="a2c_gvgai" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_paper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.eval" />
       <item itemvalue="Python.plot" />
-      <item itemvalue="Python.investigate" />
       <item itemvalue="Python.level_generator" />
       <item itemvalue="Python.auto_generate" />
+      <item itemvalue="Python.plot_paper" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plot_paper" />
+        <item itemvalue="Python.eval" />
         <item itemvalue="Python.auto_generate" />
         <item itemvalue="Python.level_generator" />
-        <item itemvalue="Python.eval" />
         <item itemvalue="Python.plot" />
-        <item itemvalue="Python.investigate" />
       </list>
     </recent_temporary>
   </component>
@@ -622,21 +483,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="173" width="1440" height="877" extended-state="0" />
+    <frame x="68" y="23" width="1466" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30884185" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2403487" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37708333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30150068" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35194942" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23082651" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -658,7 +520,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/eval.py</url>
-          <line>155</line>
+          <line>165</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -681,6 +543,11 @@
           <line>247</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eval.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -689,16 +556,8 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="70" />
+      <option name="time" value="71" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="self.c" />
-        <watch expression="self.id" />
-        <watch expression="glob.iglob(model_folder + '/*.meta')" />
-        <watch expression="sel.difficulty" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -750,9 +609,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/connection.py" />
-    <entry file="file://$PROJECT_DIR$/results/zelda-lvl-0/eval/zelda-ls-seq-0/scores/zelda-ls-seq-0.dat" />
-    <entry file="file://$PROJECT_DIR$/results/zelda-lvl-0/eval/zelda-ls-seq-10/scores/zelda-ls-seq-10.dat" />
     <entry file="file://$PROJECT_DIR$/../GVGAI_GYM/gym_gvgai/__init__.py" />
     <entry file="file://$PROJECT_DIR$/test_azure_exp.sh" />
     <entry file="file://$PROJECT_DIR$/results/zelda-lvl-0/eval/zelda-lvl-0/scores/zelda-lvl-0.dat" />
@@ -779,13 +635,6 @@
     <entry file="file://$PROJECT_DIR$/../baselines/baselines/ppo2/policies.py" />
     <entry file="file://$PROJECT_DIR$/../baselines/baselines/a2c/policies.py" />
     <entry file="file://$PROJECT_DIR$/../baselines/baselines/a2c/utils.py" />
-    <entry file="file://$PROJECT_DIR$/a2c.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/investigate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -815,13 +664,6 @@
     <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/2/zelda_81db8f42-aad7-11e8-97f1-06006c6a1901_dif0.2.txt" />
     <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/7/zelda_84e66f06-aad7-11e8-835d-06006c6a1901_dif0.7.txt" />
     <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/10/zelda_86befa30-aad7-11e8-8d28-06006c6a1901_dif1.0.txt" />
-    <entry file="file://$PROJECT_DIR$/test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eval_split.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -840,16 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,16 +715,6 @@
     <entry file="file://$PROJECT_DIR$/data/pca/solarfox/10/solarfox_0a5e715a-acd0-11e8-bdbd-06006c6a1901_dif1.0.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/level_selector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4635">
-          <caret line="309" column="52" lean-forward="true" selection-start-line="309" selection-start-column="52" selection-end-line="309" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/level_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -910,30 +732,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/0/boulderdash_15239cc6-af81-11e8-b074-06006c6a1901_dif0.0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_33cccd36-acc4-11e8-b7b4-06006c6a1901_dif1.0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/7.5/zelda_15183f5a-af81-11e8-965f-06006c6a1901_dif0.75.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/10/zelda_0a1c8636-a79f-11e8-bbcf-06006c6a1901_dif1.0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test-levels/boulderdash/0/boulderdash_15239cc6-af81-11e8-b074-06006c6a1901_dif0.0.txt" />
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/10/boulderdash_33cccd36-acc4-11e8-b7b4-06006c6a1901_dif1.0.txt" />
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/7.5/zelda_15183f5a-af81-11e8-965f-06006c6a1901_dif0.75.txt" />
     <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/5/zelda_b5e83e3a-acc3-11e8-91ef-06006c6a1901_dif0.5.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -941,52 +742,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/2.5/zelda_150c6afe-af81-11e8-bab5-06006c6a1901_dif0.25.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/0/zelda_14ff19ba-af81-11e8-bca6-06006c6a1901_dif0.0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/7.5/solarfox_158b7aa6-af81-11e8-a73a-06006c6a1901_dif0.75.txt">
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/2.5/zelda_150c6afe-af81-11e8-bab5-06006c6a1901_dif0.25.txt" />
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/0/zelda_14ff19ba-af81-11e8-bca6-06006c6a1901_dif0.0.txt" />
+    <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/7.5/solarfox_158b7aa6-af81-11e8-a73a-06006c6a1901_dif0.75.txt" />
+    <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/0/solarfox_15761350-af81-11e8-976d-06006c6a1901_dif0.0.txt" />
+    <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/2.5/solarfox_1580faa4-af81-11e8-95a7-06006c6a1901_dif0.25.txt" />
+    <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/5/solarfox_5b73aea2-acd0-11e8-918e-06006c6a1901_dif0.5.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-end-line="11" />
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/10/solarfox_54a6b98c-acd0-11e8-b710-06006c6a1901_dif1.0.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-end-line="11" />
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/0/solarfox_15761350-af81-11e8-976d-06006c6a1901_dif0.0.txt">
+    <entry file="file://$PROJECT_DIR$/data/test-levels/zelda/10/zelda_0a1c8636-a79f-11e8-bbcf-06006c6a1901_dif1.0.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="10" lean-forward="true" selection-end-line="11" />
+          <caret line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/2.5/solarfox_1580faa4-af81-11e8-95a7-06006c6a1901_dif0.25.txt">
+    <entry file="file://$PROJECT_DIR$/level_selector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-end-line="11" />
+        <state relative-caret-position="259">
+          <caret line="288" column="39" selection-start-line="288" selection-start-column="39" selection-end-line="288" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test-levels/solarfox/5/solarfox_5b73aea2-acd0-11e8-918e-06006c6a1901_dif0.5.txt">
+    <entry file="file://$PROJECT_DIR$/a2c.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="2040">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/frogs-ls-pcg-progressive-fixed/plots/.pdf.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="235" column="37" selection-start-line="235" selection-start-column="37" selection-end-line="235" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="163" column="40" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

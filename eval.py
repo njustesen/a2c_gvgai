@@ -27,7 +27,7 @@ def eval(model, env, nsteps=5, runs=100, render=False, level_selector=None):
     return scores
 
 
-def test_on(game, level, selector, experiment_name, experiment_id, policy, num_envs=1, seed=0, runs=100, render=False, save_results=True):
+def test_on(game, level, selector, experiment_name, experiment_id, policy, num_envs=1, seed=0, runs=100, render=False, save_results=True, model_steps=-1):
 
     # Environment name
     env_id = "gvgai-" + game + "-lvl" + str(level) + "-v0"
@@ -65,11 +65,14 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
     model_folder = './results/' + experiment_name + '/models/' + experiment_id + "/"
 
     # Find number of steps for last model
-    steps = -1
-    for model_meta_name in glob.iglob(model_folder + '*.meta'):
-        s = int(model_meta_name.split('.meta')[0].split('/')[-1].split("-")[1])
-        if s > steps:
-            steps = s
+    steps = 0
+    if model_steps > 0:
+        for model_meta_name in glob.iglob(model_folder + '*.meta'):
+            s = int(model_meta_name.split('.meta')[0].split('/')[-1].split("-")[1])
+            if s > steps:
+                steps = s
+    else:
+        steps = model_steps
 
     if policy == 'cnn':
         policy_fn = CnnPolicy
@@ -82,8 +85,10 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
 
     ob_space = env.observation_space
     ac_space = env.action_space
+    print("creating model")
     model = Model(policy=policy_fn, ob_space=ob_space, ac_space=ac_space, nenvs=num_envs, nsteps=5)
 
+    print("loading model")
     try:
         model.load(model_folder, steps)
     except Exception as e:
@@ -91,6 +96,7 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
         env.close()
         return
 
+    print("evaluate")
     scores = eval(model, env, runs=runs, render=render, level_selector=level_selector)
 
     mean_score = np.mean(scores)
@@ -104,7 +110,9 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
     print("Std. dev.=" + str(std_score))
     print("All scores=" + str(scores))
 
+
     if save_results:
+        print("saving results to " + score_file)
         # Save results
         with open(score_file, "a") as myfile:
             line = "Testing on=" + test_name + "\n"
@@ -130,6 +138,7 @@ def main():
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--experiment-name', help='Name of the experiment to evaluate, e.g. zelda-ls-pcg-random (default=None -> all)', default=None)
     parser.add_argument('--experiment-id', help='Id of the experiment to evaluate')
+    parser.add_argument('--model-steps', help='If specified, it loads a model trained on this amount of steps. If not, it loads the model trained on most steps.', type=int, default=-1)
     parser.add_argument('--level', help='Level (integer) to train on', type=int, default=0)
     parser.add_argument('--selector',
                         help='Level selector to use in training - will ignore the level argument if set (default: None)',
@@ -151,7 +160,8 @@ def main():
             seed=args.seed,
             num_envs=args.num_envs,
             render=args.render,
-            save_results=not args.no_save)
+            save_results=not args.no_save,
+            model_steps=args.model_steps)
 
 
 if __name__ == '__main__':

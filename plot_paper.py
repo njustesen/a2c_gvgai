@@ -122,7 +122,6 @@ def plot_mixed(path, title, titles, datasets, smooth=10, fontsize=14):
         ax.set_ylabel('Score')
         ax.set_xlabel('Steps')
         ax.set_xlim([0, np.max(x) + np.max(x) * 0.005])
-
         for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
                     ax.get_xticklabels() + ax.get_yticklabels()):
             item.set_fontsize(fontsize)
@@ -144,7 +143,7 @@ def plot_mixed(path, title, titles, datasets, smooth=10, fontsize=14):
     fig.savefig(os.path.join(path, title + '.pdf'))
 
 
-def plot(path, title, data, smooth=10, fontsize=14, multiple=False):
+def plot(path, title, data, smooth=10, fontsize=14, multiple=False, ymin_lim=None, ymax_lim=None):
     print(title)
 
     color = '#1f77b4'
@@ -246,11 +245,13 @@ def plot(path, title, data, smooth=10, fontsize=14, multiple=False):
                      ax2.get_xticklabels() +
                      ax2.get_yticklabels()):
             item.set_fontsize(fontsize)
-    plt.title(title, fontsize=fontsize)
+    #plt.title(title, fontsize=fontsize)
     ax1.set_ylabel('Score', color=ylabel_color)
     ax1.set_xlabel('Steps')
     #ax1.set_xlim([0, np.max(x)])
     ax1.set_xlim([0, int(40e6) + int(40e6) * 0.001])
+    if ymin is not None and ymax is not None:
+        ax1.set_ylim([ymin_lim, ymax_lim])
 
     for item in ([ax1.title,
                     ax1.xaxis.label,
@@ -268,19 +269,21 @@ def plot(path, title, data, smooth=10, fontsize=14, multiple=False):
     #handles, labels = plt.get_legend_handles_labels()
     #plt.legend(handles, labels, loc='upper center', ncol=2, fontsize=fontsize)
     fig.tight_layout()
-    fig.subplots_adjust(left=0.12, right=0.85, top=0.9, bottom=0.15)
+    # FROGS: fig.subplots_adjust(left=0.17, right=0.82, top=0.95, bottom=0.18)
+    fig.subplots_adjust(left=0.20, right=0.83, top=0.95, bottom=0.18)
+
     fig.savefig(os.path.join(path, title + '.pdf'))
 
 
 def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--smooth', help='How many points to smooth', type=int, default=200)
-    parser.add_argument('--font-size', help='Font size on plots', type=int, default=16)
+    parser.add_argument('--font-size', help='Font size on plots', type=int, default=24)
     args = parser.parse_args()
 
     # Main plot for each experiment
-    '''
-    for experiment_folder in glob.iglob('./results/*/'):
+
+    for experiment_folder in glob.iglob('./results/solarfox-ls-pcg-progressive-fixed/'):
         title = experiment_folder.split('/')[-2].replace('-', ' ').title()
         title = title.replace('Pcg', 'PCG').replace('Ls ', '')
         path = os.path.join(experiment_folder, 'plots/')
@@ -294,16 +297,16 @@ def main():
             #plot(path, experiment_title, experiment_data, smooth=args.smooth, fontsize=args.font_size, multiple=False)
             plt.clf()
         make_path(path)
-        title = "Progressive PCG in Boulderdash"
-        plot(path, title, data, smooth=args.smooth, fontsize=args.font_size, multiple=True)
+        title = "Progressive PCG in Solarfox"
+        plot(path, title, data, smooth=args.smooth, fontsize=args.font_size, multiple=True, ymin_lim=None, ymax_lim=None)
         plt.clf()
 
-    '''
 
     # Mixed plot for each experiment
+    '''
     titles = []
     datasets = []
-    for experiment_folder in glob.iglob('./results/zelda-ls-pcg-random*/'):
+    for experiment_folder in glob.iglob('./results/frogs-ls-pcg-random-*/'):
         title = experiment_folder.split('/')[-2].replace('-', ' ').title()
         title = title.replace('Pcg', 'PCG').replace('Ls ', '')
         title = title.replace('Random ', '')
@@ -321,8 +324,9 @@ def main():
     if len(titles) > 0:
         path = './plots/'
         make_path(path)
-        plot_mixed(path, "PCG with Fixed Difficulty in Zelda", titles, datasets, smooth=args.smooth, fontsize=args.font_size)
+        plot_mixed(path, "PCG1 in Frogs", titles, datasets, smooth=args.smooth, fontsize=args.font_size)
         plt.clf()
+    '''
 
 
 if __name__ == '__main__':
