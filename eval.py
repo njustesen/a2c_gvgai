@@ -1,4 +1,6 @@
 import tensorflow as tf
+import numpy as np
+import skvideo.io
 import argparse
 
 from level_selector import *
@@ -13,18 +15,28 @@ from baselines.common import set_global_seeds
 from baselines.ppo2.policies import CnnPolicy, LstmPolicy, LnLstmPolicy
 
 
-def eval(model, env, nsteps=5, runs=100, render=False, level_selector=None):
+def eval(model, env, nsteps=5, runs=100, render=False, record=False level_selector=None):
 
     runner = Runner(env, model, nsteps=nsteps, gamma=0, render=render)
 
     while len(runner.final_rewards) < runs:
         obs, states, rewards, masks, actions, values = runner.run()
+        if record:
+            makevideo(obs)
 
     scores = runner.final_rewards[:runs]
     mean_score = np.mean(scores)
     std_score = np.std(scores)
 
     return scores
+
+def makevideo(observations):
+    writer = skvideo.io.FFmpegWriter("outputvideo.mp4")
+    for obs in observations:
+        obs = obs*255
+        obs = obs.astype(np.uint8)
+        writer.writeFrame(obs[:, :, :3])
+    writer.close()
 
 
 def test_on(game, level, selector, experiment_name, experiment_id, policy, num_envs=1, seed=0, runs=100, render=False, save_results=True, model_steps=-1):
