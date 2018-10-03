@@ -1,13 +1,18 @@
+import os
 import numpy as np
+import skvideo.io
 from baselines.a2c.utils import discount_with_dones
 
 
 class Runner(object):
 
-    def __init__(self, env, model, nsteps=5, gamma=0.99, render=False):
+    def __init__(self, env, model, nsteps=5, gamma=0.99, render=False, record_name=None):
         self.env = env
         self.model = model
         self.render = render
+        self.recordName = record_name
+        self.record = record_name is not None
+        self.recording = []
         nh, nw, nc = env.observation_space.shape
         self.nenv = env.num_envs
         self.batch_ob_shape = (self.nenv*nsteps, nh, nw, nc)
@@ -27,6 +32,18 @@ class Runner(object):
         self.obs = np.roll(self.obs, shift=-self.nc, axis=3)
         self.obs[:, :, :, -self.nc:] = obs
 
+    def makevideo(self):
+        vid = 1
+        name = "{}_{}.mp4".format(self.recordName,vid)
+        while os.path.isfile(name):
+            vid+=1
+            name = "{}_{}.mp4".format(self.recordName,vid)
+        writer = skvideo.io.FFmpegWriter(name)
+        for obs in self.recording:
+            writer.writeFrame(obs)
+        self.recording = []
+        writer.close()
+
     def run(self):
         mb_obs, mb_rewards, mb_actions, mb_values, mb_dones = [],[],[],[],[]
         mb_states = self.states
@@ -39,6 +56,9 @@ class Runner(object):
             obs, rewards, dones, _ = self.env.step(actions)
             if self.render:
                 self.env.render()
+            if self.record:
+                frame = obs[0,:,:,:3]
+                self.recording.append(frame)
             self.states = states
             self.dones = dones
             for n, done in enumerate(dones):
@@ -69,6 +89,9 @@ class Runner(object):
                     self.final_rewards.append(self.episode_rewards[n])
                     # Reset local episode reward
                     self.episode_rewards[n] = 0
+                    #Save current game as a video
+                    if self.record:
+                        self.makevideo()
             # Discount rewards
             if dones[-1] == 0:
                 rewards = discount_with_dones(rewards+[value], dones+[0], self.gamma)[:-1]
