@@ -65,14 +65,15 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
     model_folder = './results/' + experiment_name + '/models/' + experiment_id + "/"
 
     # Find number of steps for last model
-    steps = 0
     if model_steps < 0:
         for model_meta_name in glob.iglob(model_folder + '*.meta'):
+            print(model_meta_name)
             s = int(model_meta_name.split('.meta')[0].split('/')[-1].split("-")[1])
-            if s > steps:
-                steps = s
-    else:
-        steps = model_steps
+            print(s)
+            if s > model_steps:
+                model_steps = s
+
+    print(model_steps)
 
     if policy == 'cnn':
         policy_fn = CnnPolicy
@@ -90,7 +91,7 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
 
     print("loading model")
     try:
-        model.load(model_folder, steps)
+        model.load(model_folder, model_steps)
     except Exception as e:
         print(e)
         env.close()
@@ -104,7 +105,7 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
     print("Testing on=" + test_name)
     print("Trained on=" + experiment_name)
     print("Model id=" + experiment_id)
-    print("Steps trained=" + str(steps))
+    print("Steps trained=" + str(model_steps))
     print("Runs=" + str(runs))
     print("Mean score=" + str(mean_score))
     print("Std. dev.=" + str(std_score))
@@ -118,7 +119,7 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
             line = "Testing on=" + test_name + "\n"
             line += "Trained on=" + experiment_name + "\n"
             line += "Id=" + experiment_id + "\n"
-            line += "Steps trained=" + str(steps) + "\n"
+            line += "Steps trained=" + str(model_steps) + "\n"
             line += "Runs=" + str(runs) + "\n"
             line += "Mean score=" + str(mean_score) + "\n"
             line += "Std. dev.=" + str(std_score) + "\n"

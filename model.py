@@ -63,7 +63,8 @@ class Model(object):
 
         def load(path, steps):
             self.saver = tf.train.import_meta_graph(path + 'model' + '-' + str(steps) + '.meta')
-            self.saver.restore(sess, tf.train.latest_checkpoint(path))
+            self.saver.restore(sess, path + 'model' + '-' + str(steps))
+            #self.saver.restore(sess, tf.train.latest_checkpoint(path))
 
         self.train = train
         self.train_model = train_model

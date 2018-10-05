@@ -51,10 +51,12 @@ def learn(policy, env, experiment_name, experiment_id, seed=None, nsteps=5, tota
     make_path(log_path)
     log_file = log_path + experiment_id + ".log"
 
+    f = open("demofile.txt", "w")
+
     # Create log file
     if not resume:
         with open(log_file, "a") as myfile:
-            line = "episodes; steps; frames; mean_score; std_score; min_score; max_score; difficulty\n"
+            line = "episodes; steps; frames; mean_score; std_score; min_score; max_score; difficulty; policy_loss; value_loss; episode_length;fps;\n"
             myfile.write(line)
 
     # Model folder path
@@ -98,6 +100,7 @@ def learn(policy, env, experiment_name, experiment_id, seed=None, nsteps=5, tota
                 print("Restoring difficulty to " + line.split(';')[-1])
                 level_selector.difficulty = int(line.split(';')[-1])
 
+    last_frames = 0
     for update in range(start_update, total_timesteps//nbatch+1):
         obs, states, rewards, masks, actions, values = runner.run()
 
@@ -121,6 +124,12 @@ def learn(policy, env, experiment_name, experiment_id, seed=None, nsteps=5, tota
             max_score = np.max(final_rewards)
             runner.final_rewards = runner.final_rewards[runner.nenv:]
 
+            # Debug logging
+            f = frames - last_frames
+            last_frames = frames
+            frames_per_episode = runner.nenv / f
+            last_level_id = runner.last_level_id
+
             # Log using baselines logger
             logger.record_tabular("mean_score", mean_score)
             logger.record_tabular("std_score", std_score)
@@ -139,7 +148,7 @@ def learn(policy, env, experiment_name, experiment_id, seed=None, nsteps=5, tota
                 dif = ""
                 if level_selector is not None:
                     dif = str(level_selector.get_info())
-                line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(std_score) + ";" + str(min_score) + ";" + str(max_score) + ";" + dif + "\n"
+                line = str(episodes) + ";" + str(steps) + ";" + str(frames) + ";" + str(mean_score) + ";" + str(std_score) + ";" + str(min_score) + ";" + str(max_score) + ";" + dif + ";" + str(policy_loss) + ";" + str(value_loss) + ";" + str(frames_per_episode) + ";" + str(fps) + ";" + "\n"
                 myfile.write(line)
 
         # Save model

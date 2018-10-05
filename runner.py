@@ -20,6 +20,7 @@ class Runner(object):
         self.dones = [False for _ in range(self.nenv)]
         self.final_rewards = []
         self.episode_rewards = [0 for _ in range(self.nenv)]
+        self.last_level_id = None
 
     def update_obs(self, obs):
         # Do frame-stacking here instead of the FrameStack wrapper to reduce

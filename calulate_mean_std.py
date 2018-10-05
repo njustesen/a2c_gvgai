@@ -1,7 +1,7 @@
 import os
 import numpy as np
 
-folder_path= os.getcwd() + '/results/boulderdash-ls-pcg-random-10/eval/'
+folder_path= os.getcwd() + '/results/boulderdash-ls-pcg-progressive-fixed/eval/'
 
 filenames = os.listdir(folder_path)  # get all files' and folders' names in the current directory
 filenames.sort()

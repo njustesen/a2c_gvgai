@@ -270,7 +270,7 @@ def plot(path, title, data, smooth=10, fontsize=14, multiple=False, ymin_lim=Non
     #plt.legend(handles, labels, loc='upper center', ncol=2, fontsize=fontsize)
     fig.tight_layout()
     # FROGS: fig.subplots_adjust(left=0.17, right=0.82, top=0.95, bottom=0.18)
-    fig.subplots_adjust(left=0.20, right=0.83, top=0.95, bottom=0.18)
+    fig.subplots_adjust(left=0.19, right=0.83, top=0.95, bottom=0.18)
 
     fig.savefig(os.path.join(path, title + '.pdf'))
 
