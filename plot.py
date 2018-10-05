@@ -238,6 +238,7 @@ def main():
         title = experiment_folder.split('/')[-2].replace('-', ' ').title()
         title = title.replace('Pcg', 'PCG').replace('Ls ', '')
         path = os.path.join(experiment_folder, 'plots/')
+        make_path(path)
         data = []
         i = 0
         for experiment_log in glob.iglob(os.path.join(experiment_folder, 'logs/*.log')):
@@ -247,7 +248,6 @@ def main():
             data.append(experiment_data)
             plot(path, experiment_title, experiment_data, smooth=args.smooth, fontsize=args.font_size, multiple=False)
             plt.clf()
-        make_path(path)
         plot(path, title, data, smooth=args.smooth, fontsize=args.font_size, multiple=True)
         plt.clf()
 

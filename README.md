@@ -3,7 +3,7 @@
 ## Install
 1. Install gym
 2. Install gvgai-gym
-3. Install baselines
+3. Install baselines (due to a recent update it has to be an earlier version from before August - We hope to fix this soon in our repo so it is independant)
 4. Run `sh lib/gvgai_generator/install.sh` to install the level generator.
 5. Run `pip install brewer2mpl`
 

@@ -13,12 +13,12 @@ from baselines.common import set_global_seeds
 from baselines.ppo2.policies import CnnPolicy, LstmPolicy, LnLstmPolicy
 
 
-def eval(model, env, nsteps=5, runs=100, render=False, level_selector=None):
+def eval(model, env, nsteps=5, runs=100, render=False, record_name=None, level_selector=None):
 
-    runner = Runner(env, model, nsteps=nsteps, gamma=0, render=render)
+    runner = Runner(env, model, nsteps=nsteps, gamma=0, render=render,record_name=record_name)
 
     while len(runner.final_rewards) < runs:
-        obs, states, rewards, masks, actions, values = runner.run()
+        obs, states, rewards, masks, actions, values = runner.run()    
 
     scores = runner.final_rewards[:runs]
     mean_score = np.mean(scores)
@@ -26,8 +26,7 @@ def eval(model, env, nsteps=5, runs=100, render=False, level_selector=None):
 
     return scores
 
-
-def test_on(game, level, selector, experiment_name, experiment_id, policy, num_envs=1, seed=0, runs=100, render=False, save_results=True, model_steps=-1):
+def test_on(game, level, selector, experiment_name, experiment_id, policy, num_envs=1, seed=0, runs=100, render=False, record_path=None, save_results=True, model_steps=-1):
 
     # Environment name
     env_id = "gvgai-" + game + "-lvl" + str(level) + "-v0"
@@ -97,8 +96,13 @@ def test_on(game, level, selector, experiment_name, experiment_id, policy, num_e
         env.close()
         return
 
+    if record_path is not None:
+    	name = "{}/{}_{}_steps_{}m".format(record_path, experiment_name,policy,model_steps/1000000)
+    else:
+        name = None
+
     print("evaluate")
-    scores = eval(model, env, runs=runs, render=render, level_selector=level_selector)
+    scores = eval(model, env, runs=runs, render=render, record_name=name, level_selector=level_selector)
 
     mean_score = np.mean(scores)
     std_score = np.std(scores)
@@ -144,6 +148,7 @@ def main():
     parser.add_argument('--selector',
                         help='Level selector to use in training - will ignore the level argument if set (default: None)',
                         choices=[None] + LevelSelector.available, default=None)
+    parser.add_argument('--record_path', help='Provide path to save video of agent play', default=None)
     parser.add_argument('--render', action='store_true',
                         help='Render screen (default: False)')
     parser.add_argument('--no-save', action='store_true',
@@ -161,6 +166,7 @@ def main():
             seed=args.seed,
             num_envs=args.num_envs,
             render=args.render,
+            record_path=args.record_path,
             save_results=not args.no_save,
             model_steps=args.model_steps)
 
