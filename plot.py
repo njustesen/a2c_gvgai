@@ -29,6 +29,7 @@ def load(filename):
         for line in lines:
             if i == 0:
                 i += 1
+                continue
             d = line.strip().split(";")
             while '' in d:
                 d.remove('')
