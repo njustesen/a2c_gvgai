@@ -22,16 +22,16 @@ colors = bmap.mpl_colors
 def load(filename):
     print(filename)
     data = []
+
     with open(filename) as file:
         lines = file.readlines()
         i = 0
         for line in lines:
             if i == 0:
                 i += 1
-                continue
             d = line.strip().split(";")
-            if d[-1] == '':
-                d = d[:-1]
+            while '' in d:
+                d.remove('')
             data.append(np.array(d).astype(np.float))
     return data
 
