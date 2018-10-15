@@ -97,9 +97,10 @@ def learn(policy, env, experiment_name, experiment_id, seed=None, nsteps=5, tota
         with open(log_file, "r") as myfile:
             last_line = None
             for line in myfile:
-                if len(line.strip()) > 0:
+                if len(line.strip()) > 0 and '\x00' not in line:
                     last_line = line
                 pass
+
             episodes = int(last_line.split(';')[0])
             if level_selector is not None and last_line.split(';')[-1] != '' and hasattr(level_selector, 'difficulty'):
                 print("Restoring difficulty to " + last_line.split(';')[-1])
