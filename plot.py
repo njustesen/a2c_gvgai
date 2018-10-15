@@ -27,13 +27,16 @@ def load(filename):
         lines = file.readlines()
         i = 0
         for line in lines:
-            if i == 0:
-                i += 1
-                continue
-            d = line.strip().split(";")
-            while '' in d:
-                d.remove('')
-            data.append(np.array(d).astype(np.float))
+            try:
+                if i == 0:
+                    i += 1
+                    continue
+                d = line.strip().split(";")
+                while '' in d:
+                    d.remove('')
+                data.append(np.array(d).astype(np.float))
+            except Exception as e:
+                print("Line ignored", e)
     return data
 
 
