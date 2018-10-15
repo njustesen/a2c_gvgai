@@ -32,8 +32,7 @@ def load(filename):
                     i += 1
                     continue
                 d = line.strip().split(";")
-                while '' in d:
-                    d.remove('')
+                d = [1 if x == '' else x for x in d]
                 data.append(np.array(d).astype(np.float))
             except Exception as e:
                 print("Line ignored", e)
