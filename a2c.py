@@ -45,6 +45,8 @@ def learn(policy, env, experiment_name, experiment_id, seed=None, nsteps=5, tota
             s = int(model_meta_name.split('.meta')[0].split('/')[-1].split("-")[1])
             if s >= steps:
                 steps = s
+    if resume:
+        print("Resuming from step {}".format(steps))
 
     # Log file path
     log_path = "./results/" + experiment_name + "/logs/"
@@ -126,8 +128,8 @@ def learn(policy, env, experiment_name, experiment_id, seed=None, nsteps=5, tota
 
             # Debug logging
             f = frames - last_frames
+            frames_per_episode = f / runner.nenv
             last_frames = frames
-            frames_per_episode = runner.nenv / f
             last_level_id = runner.last_level_id
 
             # Log using baselines logger
